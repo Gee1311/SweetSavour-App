@@ -1,0 +1,69 @@
+<resources>
+    <string name="app_name">DessertManiac</string>
+
+    <string name="easy_chocolate_molten_cake">Easy chocolate molten cakes</string>
+    <string name="salted_chocolate_hazelnut_brownies">Salted chocolate &amp; hazelnut brownies</string>
+    <string name="chocolate_truffle_honeycomb_torte">Chocolate truffle &amp; honeycomb torte</string>
+    <string name="treacle_tart">Treacle tart</string>
+    <string name="peach_melba_pie">Peach Melba pie</string>
+    <string name="easy_cornflake_tart">Easy cornflake tart</string>
+
+    <string name="chocolate_truffle_honeycomb_ingredient_1">3 x 40g chocolate-covered honeycomb bar</string>
+    <string name="chocolate_truffle_honeycomb_ingredient_2">100g cornflakes</string>
+    <string name="chocolate_truffle_honeycomb_ingredient_3">500g dark chocolate (at least 70% cocoa solids), broken into small pieces</string>
+    <string name="chocolate_truffle_honeycomb_ingredient_4">3 tbsp golden syrup</string>
+    <string name="chocolate_truffle_honeycomb_ingredient_5">400ml double cream</string>
+
+    <string name="easy_chocolate_molten_cake_ingredient_1">3 x 40g chocolate-covered honeycomb bar</string>
+    <string name="easy_chocolate_molten_cake_ingredient_2">100g cornflakes</string>
+    <string name="easy_chocolate_molten_cake_ingredient_3">500g dark chocolate (at least 70% cocoa solids), broken into small pieces</string>
+    <string name="easy_chocolate_molten_cake_ingredient_4">3 tbsp golden syrup</string>
+    <string name="easy_chocolate_molten_cake_ingredient_5">400ml double cream</string>
+    <string name="easy_chocolate_molten_cake_ingredient_6">3 tbsp golden syrup</string>
+    <string name="easy_chocolate_molten_cake_ingredient_7">400ml double cream</string>
+
+    <string name="salted_chocolate_hazelnut_brownies_ingredient_1">100g slightly salted butter, cut into small pieces, plus extra for the tin</string>
+    <string name="salted_chocolate_hazelnut_brownies_ingredient_2">200g 70% dark chocolate, broken into chunks</string>
+    <string name="salted_chocolate_hazelnut_brownies_ingredient_3">150g chocolate and hazelnut spread</string>
+    <string name="salted_chocolate_hazelnut_brownies_ingredient_4">200g golden caster sugar</string>
+    <string name="salted_chocolate_hazelnut_brownies_ingredient_5">150g plain flour</string>
+    <string name="salted_chocolate_hazelnut_brownies_ingredient_6">100g toasted pecan nuts, roughly chopped</string>
+    <string name="salted_chocolate_hazelnut_brownies_ingredient_7">ice cream and caramel sauce, to serve</string>
+    <string name="salted_chocolate_hazelnut_brownies_ingredient_8">3 eggs, beaten</string>
+
+    <string name="treacle_tart_ingredient_1">250g plain flour</string>
+    <string name="treacle_tart_ingredient_2">140g cold unsalted butter, cubed</string>
+    <string name="treacle_tart_ingredient_3">3 tbsp icing sugar</string>
+    <string name="treacle_tart_ingredient_4">½ tsp fine salt</string>
+    <string name="treacle_tart_ingredient_5">2 medium egg yolks</string>
+    <string name="treacle_tart_ingredient_6">2–3 tbsp cold water</string>
+    <string name="treacle_tart_ingredient_7">400g golden syrup</string>
+    <string name="treacle_tart_ingredient_8">1 ball stem ginger in syrup, finely chopped, plus 50g of the syrup</string>
+    <string name="treacle_tart_ingredient_9">1 lemon, zested</string>
+    <string name="treacle_tart_ingredient_10">2 medium eggs, lightly beaten</string>
+    <string name="treacle_tart_ingredient_11">100g fine fresh white breadcrumbs</string>
+
+    <string name="peach_melba_pie_ingredient_1">175g self-raising flour, plus extra for dusting</string>
+    <string name="peach_melba_pie_ingredient_2">175g white spelt flour</string>
+    <string name="peach_melba_pie_ingredient_3">160g unsalted butter, chilled and cubed</string>
+    <string name="peach_melba_pie_ingredient_4">4 ripe peaches</string>
+    <string name="peach_melba_pie_ingredient_5">½ lemon, juiced</string>
+    <string name="peach_melba_pie_ingredient_6">1 tbsp cornflour</string>
+    <string name="peach_melba_pie_ingredient_7">1 tsp vanilla extract</string>
+    <string name="peach_melba_pie_ingredient_8">3 tbsp light muscovado sugar</string>
+    <string name="peach_melba_pie_ingredient_9">1 tbsp runny blossom honey</string>
+    <string name="peach_melba_pie_ingredient_10">200g raspberries</string>
+    <string name="peach_melba_pie_ingredient_11">10g chilled butter</string>
+    <string name="peach_melba_pie_ingredient_12">1 egg, beaten</string>
+    <string name="peach_melba_pie_ingredient_13">2 tbsp demerara sugar</string>
+    <string name="peach_melba_pie_ingredient_14">vanilla ice cream or whipped cream, to serve</string>
+
+    <string name="easy_cornflake_tart_ingredient_1">320g ready-rolled shortcrust pastry</string>
+    <string name="easy_cornflake_tart_ingredient_2">plain flour, to dust</string>
+    <string name="easy_cornflake_tart_ingredient_3">50g butter</string>
+    <string name="easy_cornflake_tart_ingredient_4">125g golden syrup</string>
+    <string name="easy_cornflake_tart_ingredient_5">25g light brown soft sugar</string>
+    <string name="easy_cornflake_tart_ingredient_6">100g cornflakes</string>
+    <string name="easy_cornflake_tart_ingredient_7">125g strawberry or raspberry jam</string>
+    <string name="easy_cornflake_tart_ingredient_8">custard, to serve</string>
+</resources>
