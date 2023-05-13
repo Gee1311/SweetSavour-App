@@ -25,12 +25,17 @@ val Typography = Typography(
         fontFamily = montserratAlter,
     ),
     labelMedium = TextStyle(
-        fontSize = 16.sp,
+        fontSize = 14.sp,
         fontWeight = FontWeight.Medium,
         fontFamily = montserratAlter,
     ),
     bodySmall = TextStyle(
         fontSize = 12.sp,
+        fontWeight = FontWeight.Normal,
+        fontFamily = montserratAlter,
+    ),
+    bodyMedium = TextStyle(
+        fontSize = 14.sp,
         fontWeight = FontWeight.Normal,
         fontFamily = montserratAlter,
     )
