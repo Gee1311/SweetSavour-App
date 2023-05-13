@@ -66,4 +66,7 @@
     <string name="easy_cornflake_tart_ingredient_6">100g cornflakes</string>
     <string name="easy_cornflake_tart_ingredient_7">125g strawberry or raspberry jam</string>
     <string name="easy_cornflake_tart_ingredient_8">custard, to serve</string>
+
+    <string name="confirm">Confirm</string>
+    <string name="cancel">Cancel</string>
 </resources>
