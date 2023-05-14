@@ -124,4 +124,7 @@
 
     <string name="confirm">Confirm</string>
     <string name="cancel">Cancel</string>
+    <string name="rating">Rating</string>
+
+    <string name="dessert_added">%s has been added to \"Favorites\"</string>
 </resources>
