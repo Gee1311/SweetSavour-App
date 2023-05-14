@@ -4,7 +4,7 @@ import com.delusional_bear.dessertmaniac.R
 import com.delusional_bear.dessertmaniac.data.Dessert
 
 /**
- * DataSource object with the list of desserts
+ * [DataSource] object with the list of [Dessert] objects
  */
 
 object DataSource {
@@ -19,6 +19,7 @@ object DataSource {
                 R.string.chocolate_truffle_honeycomb_ingredient_4,
                 R.string.chocolate_truffle_honeycomb_ingredient_5,
             ),
+            4.0,
         ),
         Dessert(
             R.string.peach_melba_pie,
@@ -39,6 +40,7 @@ object DataSource {
                 R.string.peach_melba_pie_ingredient_13,
                 R.string.peach_melba_pie_ingredient_14,
             ),
+            5.0,
         ),
         Dessert(
             R.string.easy_chocolate_molten_cake,
@@ -52,6 +54,7 @@ object DataSource {
                 R.string.easy_chocolate_molten_cake_ingredient_6,
                 R.string.easy_chocolate_molten_cake_ingredient_7,
             ),
+            5.0,
         ),
         Dessert(
             R.string.treacle_tart,
@@ -69,6 +72,7 @@ object DataSource {
                 R.string.treacle_tart_ingredient_10,
                 R.string.treacle_tart_ingredient_11,
             ),
+            4.0,
         ),
         Dessert(
             R.string.salted_chocolate_hazelnut_brownies,
@@ -82,7 +86,8 @@ object DataSource {
                 R.string.salted_chocolate_hazelnut_brownies_ingredient_6,
                 R.string.salted_chocolate_hazelnut_brownies_ingredient_7,
                 R.string.salted_chocolate_hazelnut_brownies_ingredient_8,
-            )
+            ),
+            5.0,
         ),
         Dessert(
             R.string.easy_cornflake_tart,
@@ -96,7 +101,8 @@ object DataSource {
                 R.string.easy_cornflake_tart_ingredient_6,
                 R.string.easy_cornflake_tart_ingredient_7,
                 R.string.easy_cornflake_tart_ingredient_8,
-            )
+            ),
+            5.0,
         ),
         Dessert(
             R.string.floating_islands,
@@ -110,7 +116,8 @@ object DataSource {
                 R.string.floating_islands_ingredient_6,
                 R.string.floating_islands_ingredient_7,
                 R.string.floating_islands_ingredient_8,
-            )
+            ),
+            3.0,
         ),
         Dessert(
             R.string.blackberry_and_lemon_fool,
@@ -120,7 +127,8 @@ object DataSource {
                 R.string.blackberry_and_lemon_fool_ingredient_2,
                 R.string.blackberry_and_lemon_fool_ingredient_3,
                 R.string.blackberry_and_lemon_fool_ingredient_4,
-            )
+            ),
+            4.0,
         ),
         Dessert(
             R.string.chocolate_tiffin,
@@ -134,7 +142,8 @@ object DataSource {
                 R.string.chocolate_tiffin_ingredient_6,
                 R.string.chocolate_tiffin_ingredient_7,
                 R.string.chocolate_tiffin_ingredient_8,
-            )
+            ),
+            5.0,
         ),
         Dessert(
             R.string.nanaimo_bars,
@@ -153,7 +162,8 @@ object DataSource {
                 R.string.nanaimo_bars_ingredient_11,
                 R.string.nanaimo_bars_ingredient_12,
                 R.string.nanaimo_bars_ingredient_13,
-            )
+            ),
+            4.0,
         ),
         Dessert(
             R.string.white_chocolate_cheesecake,
@@ -166,7 +176,8 @@ object DataSource {
                 R.string.white_chocolate_cheesecake_ingredient_5,
                 R.string.white_chocolate_cheesecake_ingredient_6,
                 R.string.white_chocolate_cheesecake_ingredient_7,
-            )
+            ),
+            4.0,
         ),
     )
 }
