@@ -30,7 +30,7 @@ val Typography = Typography(
         fontFamily = montserratAlter,
     ),
     bodySmall = TextStyle(
-        fontSize = 12.sp,
+        fontSize = 13.sp,
         fontWeight = FontWeight.Normal,
         fontFamily = montserratAlter,
     ),
