@@ -179,5 +179,19 @@ object DataSource {
             ),
             4.0,
         ),
+        Dessert(
+            R.string.vanilla_panna_cotta,
+            R.drawable.vanilla_panna_cotta,
+            listOf(
+                R.string.vanilla_panna_cotta_ingredient_1,
+                R.string.vanilla_panna_cotta_ingredient_2,
+                R.string.vanilla_panna_cotta_ingredient_3,
+                R.string.vanilla_panna_cotta_ingredient_4,
+                R.string.vanilla_panna_cotta_ingredient_5,
+                R.string.vanilla_panna_cotta_ingredient_6,
+                R.string.vanilla_panna_cotta_ingredient_7,
+            ),
+            5.0,
+        ),
     )
 }
