@@ -50,14 +50,18 @@ fun DessertCard(
     )
 
     Card(
-        elevation = CardDefaults.cardElevation(defaultElevation = 4.dp),
+        elevation = CardDefaults.cardElevation(
+            defaultElevation = 3.dp,
+            pressedElevation = 7.dp,
+            focusedElevation = 20.dp,
+        ),
         modifier = modifier.clickable { expanded = !expanded }
     ) {
         Column(
             modifier = modifier
                 .animateContentSize(
                     spring(
-                        dampingRatio = Spring.DampingRatioNoBouncy,
+                        dampingRatio = Spring.DampingRatioLowBouncy,
                         stiffness = Spring.StiffnessMediumLow,
                     )
                 )
@@ -108,8 +112,12 @@ fun DessertCard(
                 modifier = modifier.size(width = 300.dp, height = 177.dp)
             )
             if (expanded) {
-                dessert.ingredients.forEach {
-                    DessertManiacIngredientText(ingredient = it)
+                Column(
+                    modifier = Modifier.padding(vertical = 10.dp)
+                ) {
+                    dessert.ingredients.forEach {
+                        DessertManiacIngredientText(ingredient = it)
+                    }
                 }
             }
         }
