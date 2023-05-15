@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">DessertManiac</string>
+    <string name="app_name" translatable="false">DessertManiac</string>
 
     <string name="easy_chocolate_molten_cake">Easy chocolate molten cakes</string>
     <string name="salted_chocolate_hazelnut_brownies">Salted chocolate &amp; hazelnut brownies</string>
@@ -7,6 +7,12 @@
     <string name="treacle_tart">Treacle tart</string>
     <string name="peach_melba_pie">Peach Melba pie</string>
     <string name="easy_cornflake_tart">Easy cornflake tart</string>
+    <string name="vanilla_panna_cotta">Vanilla panna cotta</string>
+    <string name="nanaimo_bars">Nanaimo bars</string>
+    <string name="floating_islands">Floating islands</string>
+    <string name="blackberry_and_lemon_fool">Blackberry &amp; lemon fool</string>
+    <string name="chocolate_tiffin">Chocolate tiffin</string>
+    <string name="white_chocolate_cheesecake">White chocolate cheesecake</string>
 
     <string name="chocolate_truffle_honeycomb_ingredient_1">3 x 40g chocolate-covered honeycomb bar</string>
     <string name="chocolate_truffle_honeycomb_ingredient_2">100g cornflakes</string>
@@ -67,8 +73,6 @@
     <string name="easy_cornflake_tart_ingredient_7">125g strawberry or raspberry jam</string>
     <string name="easy_cornflake_tart_ingredient_8">custard, to serve</string>
 
-    <string name="floating_islands">Floating islands</string>
-
     <string name="floating_islands_ingredient_1">500ml whole milk</string>
     <string name="floating_islands_ingredient_2">2 tsp vanilla bean paste</string>
     <string name="floating_islands_ingredient_3">4 large egg yolks (save the white of 1 egg and freeze the rest for another recipe)</string>
@@ -78,14 +82,10 @@
     <string name="floating_islands_ingredient_7">200ml whole milk</string>
     <string name="floating_islands_ingredient_8">50g caster sugar</string>
 
-    <string name="blackberry_and_lemon_fool">Blackberry &amp; lemon fool</string>
-
     <string name="blackberry_and_lemon_fool_ingredient_1">200g blackberries, plus extra for the topping</string>
     <string name="blackberry_and_lemon_fool_ingredient_2">3 tbsp icing sugar</string>
     <string name="blackberry_and_lemon_fool_ingredient_3">zest and juice of ½ a lemon</string>
     <string name="blackberry_and_lemon_fool_ingredient_4">250ml double cream</string>
-
-    <string name="chocolate_tiffin">Chocolate tiffin</string>
 
     <string name="chocolate_tiffin_ingredient_1">150g butter, cubed, plus extra for the tin</string>
     <string name="chocolate_tiffin_ingredient_2">3 tbsp caster sugar</string>
@@ -96,8 +96,6 @@
     <string name="chocolate_tiffin_ingredient_7">110g milk chocolate</string>
     <string name="chocolate_tiffin_ingredient_8">110g dark chocolate</string>
 
-    <string name="white_chocolate_cheesecake">White chocolate cheesecake</string>
-
     <string name="white_chocolate_cheesecake_ingredient_1">300g digestive biscuits</string>
     <string name="white_chocolate_cheesecake_ingredient_2">150g unsalted butter, melted, plus extra to grease</string>
     <string name="white_chocolate_cheesecake_ingredient_3">400g white chocolate, broken into pieces</string>
@@ -105,8 +103,6 @@
     <string name="white_chocolate_cheesecake_ingredient_5">250g mascarpone</string>
     <string name="white_chocolate_cheesecake_ingredient_6">300ml double cream</string>
     <string name="white_chocolate_cheesecake_ingredient_7">200g strawberries or raspberries, to serve</string>
-
-    <string name="nanaimo_bars">Nanaimo bars</string>
 
     <string name="nanaimo_bars_ingredient_1">125g softened butter</string>
     <string name="nanaimo_bars_ingredient_2">50g caster sugar</string>
@@ -121,6 +117,14 @@
     <string name="nanaimo_bars_ingredient_11">250g icing sugar</string>
     <string name="nanaimo_bars_ingredient_12">150g dark chocolate</string>
     <string name="nanaimo_bars_ingredient_13">50g butter</string>
+
+    <string name="vanilla_panna_cotta_ingredient_1">2 ½ sheets gelatine</string>
+    <string name="vanilla_panna_cotta_ingredient_2">150ml milk</string>
+    <string name="vanilla_panna_cotta_ingredient_3">60g caster sugar</string>
+    <string name="vanilla_panna_cotta_ingredient_4">1 vanilla pod, split lengthways</string>
+    <string name="vanilla_panna_cotta_ingredient_5">fresh strawberries, to serve</string>
+    <string name="vanilla_panna_cotta_ingredient_6">400ml double cream</string>
+    <string name="vanilla_panna_cotta_ingredient_7">strawberry compote, to serve</string>
 
     <string name="confirm">Confirm</string>
     <string name="cancel">Cancel</string>
