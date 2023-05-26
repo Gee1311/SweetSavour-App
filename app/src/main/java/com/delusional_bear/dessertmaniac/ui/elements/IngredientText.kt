@@ -1,4 +1,4 @@
-package com.delusional_bear.dessertmaniac.ui
+package com.delusional_bear.dessertmaniac.ui.elements
 
 import androidx.annotation.StringRes
 import androidx.compose.foundation.layout.padding

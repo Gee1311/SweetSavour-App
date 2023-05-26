@@ -1,4 +1,4 @@
-package com.delusional_bear.dessertmaniac.ui
+package com.delusional_bear.dessertmaniac.ui.elements
 
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
