@@ -28,10 +28,12 @@ import com.delusional_bear.dessertmaniac.data.Dessert
 fun DessertManiacAlertDialog(
     modifier: Modifier = Modifier,
     dessert: Dessert,
-    onDialogClick: () -> Unit,
+    onDialogDismiss: () -> Unit,
+    onConfirmClick: () -> Unit,
+    onCancelClick: () -> Unit,
 ) {
     AlertDialog(
-        onDismissRequest = onDialogClick,
+        onDismissRequest = onDialogDismiss,
         content = {
             Surface(
                 modifier = modifier
@@ -51,7 +53,7 @@ fun DessertManiacAlertDialog(
                         modifier = modifier.align(Alignment.End),
                     ) {
                         TextButton(
-                            onClick = onDialogClick,
+                            onClick = onCancelClick,
                             modifier = modifier,
                         ) {
                             Text(
@@ -60,7 +62,7 @@ fun DessertManiacAlertDialog(
                             )
                         }
                         TextButton(
-                            onClick = onDialogClick,
+                            onClick = onConfirmClick,
                             modifier = modifier,
                         ) {
                             Text(
