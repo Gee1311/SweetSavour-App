@@ -131,4 +131,8 @@
     <string name="rating">Rating</string>
 
     <string name="dessert_added">%s has been added to \"Favorites\"</string>
+    <string name="top_most_rated">Top most rated desserts</string>
+    <string name="all_desserts">All desserts</string>
+    <string name="top_most_popular">Top most popular desserts</string>
+    <string name="top_worst_rated">Top worst rated desserts</string>
 </resources>

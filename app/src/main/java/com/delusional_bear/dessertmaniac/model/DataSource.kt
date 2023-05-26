@@ -193,5 +193,7 @@ object DataSource {
             ),
             5.0,
         ),
-    )
+    ).toList().sortedByDescending { it.rating }
+
+
 }
