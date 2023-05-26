@@ -135,4 +135,7 @@
     <string name="all_desserts">All desserts</string>
     <string name="top_most_popular">Top most popular desserts</string>
     <string name="top_worst_rated">Top worst rated desserts</string>
+    <string name="app_slogan_1">Indulge Your Sweet Side with DessertManiac: Your Tastebuds\' Ultimate Adventure!</string>
+    <string name="app_slogan_2">Indulge Your Sweet Tooth with DessertManiac: The Ultimate App for Confectionery Cravings!</string>
+    <string name="app_slogan_3">Indulge Your Sweet Tooth with DessertManiac: Unleash Your Inner Connoisseur!</string>
 </resources>

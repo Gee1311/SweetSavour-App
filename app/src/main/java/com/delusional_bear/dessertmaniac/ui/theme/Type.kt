@@ -29,6 +29,16 @@ val Typography = Typography(
         fontWeight = FontWeight.Normal,
         fontFamily = montserratAlter,
     ),
+    displaySmall = TextStyle(
+        fontSize = 18.sp,
+        fontWeight = FontWeight.Normal,
+        fontFamily = montserratAlter,
+    ),
+    titleLarge = TextStyle(
+        fontSize = 22.sp,
+        fontWeight = FontWeight.Light,
+        fontFamily = montserratAlter,
+    ),
     titleSmall = TextStyle(
         fontSize = 18.sp,
         fontWeight = FontWeight.Normal,
