@@ -104,7 +104,12 @@ fun DessertCard(
                 color = textColor,
             )
             if (isDialogCalled) {
-                DessertManiacAlertDialog(dessert = dessert) { isDialogCalled = false }
+                DessertManiacAlertDialog(
+                    dessert = dessert,
+                    onDialogDismiss = { isDialogCalled = false },
+                    onCancelClick = { isDialogCalled = false },
+                    onConfirmClick = { isDialogCalled = false },
+                )
             }
             Image(
                 painter = painterResource(id = dessert.dessertImage),
