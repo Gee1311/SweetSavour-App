@@ -12,6 +12,7 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.res.dimensionResource
 import androidx.compose.ui.res.stringResource
+import androidx.compose.ui.text.style.TextAlign
 import com.delusional_bear.dessertmaniac.R
 
 @Composable
@@ -30,6 +31,7 @@ fun DessertManiacCategoryButton(
                 .fillMaxWidth()
                 .wrapContentWidth(Alignment.CenterHorizontally),
             style = MaterialTheme.typography.titleSmall,
+            textAlign = TextAlign.Center,
         )
     }
 }
