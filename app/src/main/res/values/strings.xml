@@ -1,6 +1,6 @@
 <resources>
     <string name="app_name" translatable="false">DessertManiac</string>
-
+    <string name="app_name_on_home_screen" translatable="false">Dessert\nManiac</string>
     <string name="easy_chocolate_molten_cake">Easy chocolate molten cakes</string>
     <string name="salted_chocolate_hazelnut_brownies">Salted chocolate &amp; hazelnut brownies</string>
     <string name="chocolate_truffle_honeycomb_torte">Chocolate truffle &amp; honeycomb torte</string>
