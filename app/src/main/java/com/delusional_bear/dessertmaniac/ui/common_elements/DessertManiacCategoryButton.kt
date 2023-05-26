@@ -1,4 +1,4 @@
-package com.delusional_bear.dessertmaniac.ui.common_ui_elements
+package com.delusional_bear.dessertmaniac.ui.common_elements
 
 import androidx.annotation.StringRes
 import androidx.compose.foundation.layout.fillMaxWidth
