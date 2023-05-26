@@ -195,5 +195,15 @@ object DataSource {
         ),
     ).toList().sortedByDescending { it.rating }
 
+    val mainScreenRandomImagesList = listOf(
+        R.drawable.main_screen_random_image_1,
+        R.drawable.main_screen_random_image_2,
+        R.drawable.main_screen_random_image_3,
+    )
 
+    val mainScreenRandomSloganList = listOf(
+        R.string.app_slogan_1,
+        R.string.app_slogan_2,
+        R.string.app_slogan_3,
+    )
 }
