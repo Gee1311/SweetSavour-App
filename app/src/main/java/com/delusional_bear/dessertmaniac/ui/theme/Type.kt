@@ -40,7 +40,7 @@ val Typography = Typography(
         fontFamily = montserratAlter,
     ),
     titleSmall = TextStyle(
-        fontSize = 18.sp,
+        fontSize = 16.sp,
         fontWeight = FontWeight.Normal,
         fontFamily = montserratAlter,
     ),

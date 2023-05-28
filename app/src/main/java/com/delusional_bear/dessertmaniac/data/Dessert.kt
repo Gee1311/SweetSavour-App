@@ -12,4 +12,7 @@ data class Dessert(
     @DrawableRes val dessertImage: Int,
     @StringRes val ingredients: List<Int>,
     val rating: Double,
+    val preparationTime: Int = 0,
+    val cookTime: Int = 0,
+    val nutrition: List<Pair<String, Int>> = emptyList()
 )

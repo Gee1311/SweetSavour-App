@@ -132,10 +132,12 @@
 
     <string name="dessert_added">%s has been added to \"Favorites\"</string>
     <string name="top_most_rated">Top most rated desserts</string>
-    <string name="all_desserts">All desserts</string>
+    <string name="all_desserts">All\ndesserts</string>
     <string name="top_most_popular">Top most popular desserts</string>
     <string name="top_worst_rated">Top worst rated desserts</string>
     <string name="app_slogan_1">Indulge Your Sweet Side with DessertManiac: Your Tastebuds\' Ultimate Adventure!</string>
     <string name="app_slogan_2">Indulge Your Sweet Tooth with DessertManiac: The Ultimate App for Confectionery Cravings!</string>
     <string name="app_slogan_3">Indulge Your Sweet Tooth with DessertManiac: Unleash Your Inner Connoisseur!</string>
+    <string name="app_slogan_4">Indulge Your Sweet Tooth with DessertManiac: Satisfy Your Cravings, One Bite at a Time!</string>
+    <string name="app_slogan_5">Indulge Your Sweet Cravings with DessertManiac: Satisfy Your Treat Desires at Your Fingertips!</string>
 </resources>
