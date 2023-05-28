@@ -22,11 +22,10 @@ fun TopMostPopularScreen(
 ) {
     LazyVerticalStaggeredGrid(
         columns = StaggeredGridCells.Fixed(2),
-        modifier = modifier
-            .padding(dimensionResource(id = R.dimen.padding_small)),
+        modifier = modifier.padding(dimensionResource(id = R.dimen.padding_small)),
         horizontalArrangement = Arrangement.spacedBy(8.dp),
         verticalItemSpacing = 16.dp,
     ) {
-        items(listOfDesserts.filter { it.rating >= 4.0 }) { dessert -> DessertCard(dessert = dessert) }
+        items(listOfDesserts.filter { it.rating >= 4.0 }.take(6)) { dessert -> DessertCard(dessert = dessert) }
     }
 }
