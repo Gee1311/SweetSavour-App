@@ -1,4 +1,4 @@
-package com.delusional_bear.dessertmaniac.ui.common_elements
+package com.delusional_bear.dessertmaniac.ui.elements
 
 import androidx.annotation.DrawableRes
 import androidx.annotation.StringRes
@@ -26,7 +26,7 @@ import androidx.compose.ui.unit.dp
 import com.delusional_bear.dessertmaniac.R
 
 @Composable
-fun DessertManiacCategoryCard(
+fun CategoryCard(
     @StringRes title: Int,
     @DrawableRes image: Int,
     modifier: Modifier = Modifier,
