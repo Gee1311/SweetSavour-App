@@ -133,11 +133,48 @@
     <string name="dessert_added">%s has been added to \"Favorites\"</string>
     <string name="top_most_rated">Top most rated desserts</string>
     <string name="all_desserts">All\ndesserts</string>
+    <string name="all_desserts_top_bar">All desserts</string>
     <string name="top_most_popular">Top most popular desserts</string>
     <string name="top_worst_rated">Top worst rated desserts</string>
+    <string name="location">Location</string>
+    <string name="location_text">The list of locations where you can find our shops</string>
+
+    <string name="new_york">New York City, NY</string>
+    <string name="orlando">Orlando, FL</string>
+    <string name="austin">Austin, TX</string>
+    <string name="los_angeles">Los Angeles, CA</string>
+    <string name="portland">Portland, OR</string>
+    <string name="new_york_address">1st Avenue</string>
+    <string name="orlando_address">19th St</string>
+    <string name="austin_address">14 Tee Dr</string>
+    <string name="los_angeles_address">Aviation Way</string>
+    <string name="portland_address">37th Avenue</string>
+
+    <string name="kyiv_obolon">Obolon, Kyiv</string>
+    <string name="lviv_kleparow">Kleparow, Lviv</string>
+    <string name="lviv_frankivskyi">Frankivskyi District, Lviv</string>
+    <string name="kyiv_address_1">Heroiv Dnipra St</string>
+    <string name="kyiv_address_2">Yordanska St</string>
+    <string name="lviv_address_1">Volodymyra Velykoho St</string>
+    <string name="lviv_address_2">Kleparowskya St</string>
+    <string name="shop_rating">%s</string>
+    <string name="shop_reviews">%s</string>
+    <string name="closed">Closed</string>
+    <string name="open">Open</string>
+    <string name="schedule">%1s - %2s</string>
+
     <string name="app_slogan_1">Indulge Your Sweet Side with DessertManiac: Your Tastebuds\' Ultimate Adventure!</string>
     <string name="app_slogan_2">Indulge Your Sweet Tooth with DessertManiac: The Ultimate App for Confectionery Cravings!</string>
     <string name="app_slogan_3">Indulge Your Sweet Tooth with DessertManiac: Unleash Your Inner Connoisseur!</string>
     <string name="app_slogan_4">Indulge Your Sweet Tooth with DessertManiac: Satisfy Your Cravings, One Bite at a Time!</string>
     <string name="app_slogan_5">Indulge Your Sweet Cravings with DessertManiac: Satisfy Your Treat Desires at Your Fingertips!</string>
+    <string name="united_states">United States</string>
+    <string name="ukraine">Ukraine</string>
+    <string name="country">Country</string>
+    <string name="pick_up_your_country">Firstly, pick up your country</string>
+    <string name="directions">Directions</string>
+    <string name="reserve">Reserve</string>
+    <string name="menu">Menu</string>
+    <string name="call">Call</string>
+    <string name="save">Save</string>
 </resources>
