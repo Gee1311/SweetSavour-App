@@ -1,7 +1,10 @@
 package com.delusional_bear.dessertmaniac.model
 
 import com.delusional_bear.dessertmaniac.R
+import com.delusional_bear.dessertmaniac.data.Country
 import com.delusional_bear.dessertmaniac.data.Dessert
+import com.delusional_bear.dessertmaniac.data.Location
+import com.google.android.gms.maps.model.LatLng
 
 /**
  * [DataSource] object with the list of [Dessert] objects
@@ -1129,4 +1132,125 @@ object DataSource {
         Pair(R.string.top_worst_rated, R.drawable.top_worst_rated),
         Pair(R.string.all_desserts, R.drawable.all_desserts),
     )
+
+    val countryList = listOf(
+        Country(
+            R.string.united_states,
+            R.drawable.united_states,
+        ),
+        Country(
+            R.string.ukraine,
+            R.drawable.ukraine,
+        ),
+    )
+
+    val locationList = mutableListOf(
+        Location(
+            R.string.new_york,
+            R.string.new_york_address,
+            4.5,
+            false,
+            1103,
+            "7:00 AM",
+            "5:00 PM",
+            Country(R.string.united_states),
+            LatLng(40.763171768987995, -73.95919479615374),
+        ),
+        Location(
+            R.string.orlando,
+            R.string.orlando_address,
+            3.9,
+            false,
+            114,
+            "7:30 AM",
+            "5:30 PM",
+            Country(R.string.united_states),
+            LatLng(28.52207655666546, -81.39265616603868),
+        ),
+        Location(
+            R.string.kyiv_obolon,
+            R.string.kyiv_address_1,
+            4.1,
+            false,
+            542,
+            "6:30 AM",
+            "6:00 PM",
+            Country(R.string.ukraine),
+            LatLng(50.522564651888516, 30.499148659720614),
+        ),
+        Location(
+            R.string.kyiv_obolon,
+            R.string.kyiv_address_2,
+            4.7,
+            false,
+            1039,
+            "6:30 AM",
+            "6:00 PM",
+            Country(R.string.ukraine),
+            LatLng(50.49489348389758, 30.507526049210878),
+        ),
+        Location(
+            R.string.austin,
+            R.string.austin_address,
+            4.2,
+            false,
+            930,
+            "6:00 AM",
+            "6:00 PM",
+            Country(R.string.united_states),
+            LatLng(30.442748844200956, -97.79614727976275),
+        ),
+        Location(
+            R.string.los_angeles,
+            R.string.los_angeles_address,
+            3.8,
+            false,
+            764,
+            "6:00 AM",
+            "6:30 PM",
+            Country(R.string.united_states),
+            LatLng(33.872950820109246, -118.37950223512051),
+        ),
+        Location(
+            R.string.portland,
+            R.string.portland_address,
+            4.5,
+            false,
+            240,
+            "5:30 AM",
+            "5:00 PM",
+            Country(R.string.united_states),
+            LatLng(45.55041679568743, -122.62467159640424),
+        ),
+        Location(
+            R.string.lviv_kleparow,
+            R.string.lviv_address_2,
+            5.0,
+            false,
+            492,
+            "7:00 AM",
+            "7:00 PM",
+            Country(R.string.ukraine),
+            LatLng(49.84488545550968, 24.020240977523013),
+        ),
+        Location(
+            R.string.lviv_frankivskyi,
+            R.string.lviv_address_1,
+            4.2,
+            false,
+            1039,
+            "6:30 AM",
+            "7:00 PM",
+            Country(R.string.ukraine),
+            LatLng(49.810303442391785, 24.002925367608107),
+        ),
+    ).toList().sortedBy { it.country.countryName }
+
+    val locationButtonContentList = mutableListOf(
+        Pair(R.drawable.directions, R.string.directions),
+        Pair(R.drawable.reserve, R.string.reserve),
+        Pair(R.drawable.menu, R.string.menu),
+        Pair(R.drawable.call, R.string.call),
+        Pair(R.drawable.bookmark, R.string.save),
+    ).toList()
 }
