@@ -1,6 +1,7 @@
 package com.delusional_bear.dessertmaniac.ui.screens
 
 import androidx.compose.foundation.ExperimentalFoundationApi
+import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.fillMaxSize
@@ -24,7 +25,7 @@ import androidx.compose.ui.unit.sp
 import com.delusional_bear.dessertmaniac.R
 import com.delusional_bear.dessertmaniac.model.DataSource
 import com.delusional_bear.dessertmaniac.model.DataSource.mainScreenRandomSloganList
-import com.delusional_bear.dessertmaniac.ui.common_elements.DessertManiacCategoryCard
+import com.delusional_bear.dessertmaniac.ui.elements.CategoryCard
 import com.delusional_bear.dessertmaniac.ui.theme.DessertManiacTheme
 
 @OptIn(ExperimentalFoundationApi::class)
@@ -35,6 +36,7 @@ fun StartScreen(
     onTopMostRatedClick: () -> Unit,
     onTopWorstRatedClick: () -> Unit,
     onAllClick: () -> Unit,
+    onSloganCardClick: () -> Unit,
 ) {
     Column(
         modifier = modifier
@@ -47,7 +49,8 @@ fun StartScreen(
                 .padding(
                     horizontal = 30.dp,
                     vertical = dimensionResource(id = R.dimen.padding_small)
-                ),
+                )
+                .clickable { onSloganCardClick() },
         ) {
             Column(
                 modifier = Modifier
@@ -79,28 +82,28 @@ fun StartScreen(
             items(DataSource.categoryAndImageList) { index ->
                 when (index.first) {
                     R.string.top_most_popular -> {
-                        DessertManiacCategoryCard(
+                        CategoryCard(
                             title = index.first,
                             image = index.second,
                             onClick = onTopMostPopularClick,
                         )
                     }
                     R.string.top_most_rated -> {
-                        DessertManiacCategoryCard(
+                        CategoryCard(
                             title = index.first,
                             image = index.second,
                             onClick = onTopMostRatedClick,
                         )
                     }
                     R.string.top_worst_rated -> {
-                        DessertManiacCategoryCard(
+                        CategoryCard(
                             title = index.first,
                             image = index.second,
                             onClick = onTopWorstRatedClick,
                         )
                     }
                     R.string.all_desserts -> {
-                        DessertManiacCategoryCard(
+                        CategoryCard(
                             title = index.first,
                             image = index.second,
                             onClick = onAllClick,
@@ -117,12 +120,11 @@ fun StartScreen(
 private fun StartScreenLightThemePreview() {
     DessertManiacTheme {
         StartScreen(
-            onTopMostPopularClick = { /*TODO*/ },
-            onTopMostRatedClick = { /*TODO*/ },
-            onTopWorstRatedClick = { /*TODO*/ },
-        ) {
-
-        }
+            onTopMostPopularClick = {},
+            onTopMostRatedClick = {},
+            onTopWorstRatedClick = {},
+            onAllClick = {},
+        ) {}
     }
 }
 @Preview
@@ -130,11 +132,10 @@ private fun StartScreenLightThemePreview() {
 private fun StartScreenDarkThemePreview() {
     DessertManiacTheme(darkTheme = true) {
         StartScreen(
-            onTopMostPopularClick = { /*TODO*/ },
-            onTopMostRatedClick = { /*TODO*/ },
-            onTopWorstRatedClick = { /*TODO*/ },
-        ) {
-
-        }
+            onTopMostPopularClick = {},
+            onTopMostRatedClick = {},
+            onTopWorstRatedClick = {},
+            onAllClick = {},
+        ) {}
     }
 }
