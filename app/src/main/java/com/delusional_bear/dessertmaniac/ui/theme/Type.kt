@@ -8,13 +8,14 @@ import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.sp
 import com.delusional_bear.dessertmaniac.R
 
-val montserratAlter = FontFamily(
-    Font(R.font.montserrat_alter_medium, FontWeight.Medium),
-    Font(R.font.montserrat_alter_black, FontWeight.Black),
-    Font(R.font.montserrat_alter_extrabold, FontWeight.ExtraBold),
-    Font(R.font.montserrat_alter_semibold, FontWeight.SemiBold),
-    Font(R.font.montserrat_alter_regular, FontWeight.Normal),
-    Font(R.font.montserrat_alter_bold, FontWeight.Bold),
+val tiltprism = FontFamily(
+    Font(R.font.tiltprism_regular, FontWeight.Normal)
+)
+
+val montserratAlternates = FontFamily(
+    Font(R.font.montserrat_alternates_light, FontWeight.Light),
+    Font(R.font.montserrat_alternates_regular, FontWeight.Normal),
+    Font(R.font.montserrat_alternates_medium, FontWeight.Medium),
 )
 
 // Set of Material typography styles to start with
@@ -22,46 +23,46 @@ val Typography = Typography(
     displayLarge = TextStyle(
         fontSize = 34.sp,
         fontWeight = FontWeight.Normal,
-        fontFamily = montserratAlter,
+        fontFamily = montserratAlternates,
     ),
     displayMedium = TextStyle(
         fontSize = 25.sp,
         fontWeight = FontWeight.Normal,
-        fontFamily = montserratAlter,
+        fontFamily = montserratAlternates,
     ),
     displaySmall = TextStyle(
         fontSize = 18.sp,
         fontWeight = FontWeight.Normal,
-        fontFamily = montserratAlter,
+        fontFamily = montserratAlternates,
     ),
     headlineMedium = TextStyle(
         fontSize = 21.sp,
-        fontWeight = FontWeight.Bold,
-        fontFamily = montserratAlter,
+        fontWeight = FontWeight.Medium,
+        fontFamily = montserratAlternates,
     ),
     titleLarge = TextStyle(
-        fontSize = 22.sp,
+        fontSize = 27.sp,
         fontWeight = FontWeight.Light,
-        fontFamily = montserratAlter,
+        fontFamily = montserratAlternates,
     ),
     titleSmall = TextStyle(
         fontSize = 16.sp,
         fontWeight = FontWeight.Normal,
-        fontFamily = montserratAlter,
+        fontFamily = montserratAlternates,
     ),
     labelMedium = TextStyle(
         fontSize = 14.sp,
         fontWeight = FontWeight.Medium,
-        fontFamily = montserratAlter,
+        fontFamily = montserratAlternates,
     ),
     bodySmall = TextStyle(
         fontSize = 13.sp,
         fontWeight = FontWeight.Normal,
-        fontFamily = montserratAlter,
+        fontFamily = montserratAlternates,
     ),
     bodyMedium = TextStyle(
         fontSize = 14.sp,
         fontWeight = FontWeight.Normal,
-        fontFamily = montserratAlter,
+        fontFamily = montserratAlternates,
     ),
 )
