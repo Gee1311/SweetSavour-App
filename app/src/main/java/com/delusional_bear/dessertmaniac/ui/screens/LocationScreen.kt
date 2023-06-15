@@ -16,8 +16,8 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.res.dimensionResource
 import com.delusional_bear.dessertmaniac.R
 import com.delusional_bear.dessertmaniac.data.Location
-import com.delusional_bear.dessertmaniac.ui.elements.DessertMap
-import com.delusional_bear.dessertmaniac.ui.elements.LocationCard
+import com.delusional_bear.dessertmaniac.ui.elements.other.Map
+import com.delusional_bear.dessertmaniac.ui.elements.cards.LocationCard
 import com.google.android.gms.maps.model.LatLng
 
 @Composable
@@ -33,7 +33,7 @@ fun LocationScreen(
         horizontalAlignment = Alignment.CenterHorizontally,
     ) {
 
-        DessertMap(latLng = latLong)
+        Map(latLng = latLong)
         LazyRow(
             modifier = modifier
                 .padding(dimensionResource(id = R.dimen.padding_small)),
