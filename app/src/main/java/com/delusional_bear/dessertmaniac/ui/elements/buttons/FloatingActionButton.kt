@@ -7,7 +7,7 @@ import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.layout.width
 import androidx.compose.foundation.layout.wrapContentSize
-import androidx.compose.material3.FloatingActionButton
+import androidx.compose.material3.ExtendedFloatingActionButton
 import androidx.compose.material3.Icon
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Text
@@ -17,16 +17,18 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.res.dimensionResource
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.res.stringResource
+import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import com.delusional_bear.dessertmaniac.R
+import com.delusional_bear.dessertmaniac.ui.theme.DessertManiacTheme
 
 @Composable
 fun SweetFloatingActionButton(
     modifier: Modifier = Modifier,
     onFABCLick: () -> Unit,
 ) {
-    FloatingActionButton(
+    ExtendedFloatingActionButton(
         onClick = onFABCLick,
         modifier = modifier
             .fillMaxSize()
@@ -51,6 +53,26 @@ fun SweetFloatingActionButton(
                 style = MaterialTheme.typography.titleSmall,
                 fontSize = 18.sp,
             )
+        }
+    }
+}
+
+@Preview
+@Composable
+private fun FloatingActionButtonLightThemePreview() {
+    DessertManiacTheme() {
+        SweetFloatingActionButton {
+            
+        }
+    }    
+}
+
+@Preview
+@Composable
+private fun FloatingActionButtonDarkThemePreview() {
+    DessertManiacTheme(darkTheme = true) {
+        SweetFloatingActionButton {
+            
         }
     }
 }
