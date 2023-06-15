@@ -1,4 +1,4 @@
-package com.delusional_bear.dessertmaniac.ui.elements
+package com.delusional_bear.dessertmaniac.ui.elements.other
 
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
@@ -18,7 +18,7 @@ import com.google.maps.android.compose.MarkerState
 import com.google.maps.android.compose.rememberCameraPositionState
 
 @Composable
-fun DessertMap(
+fun Map(
     latLng: LatLng,
     modifier: Modifier = Modifier
 ) {
@@ -42,5 +42,6 @@ fun DessertMap(
                 snippet = "Marker in Country"
             )
         }
+
     }
 }

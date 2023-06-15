@@ -1,4 +1,4 @@
-package com.delusional_bear.dessertmaniac.ui.elements
+package com.delusional_bear.dessertmaniac.ui.elements.texts
 
 import androidx.annotation.StringRes
 import androidx.compose.material3.MaterialTheme
