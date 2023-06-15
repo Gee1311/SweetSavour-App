@@ -1,4 +1,4 @@
-package com.delusional_bear.dessertmaniac.ui.elements
+package com.delusional_bear.dessertmaniac.ui.elements.buttons
 
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.Spacer

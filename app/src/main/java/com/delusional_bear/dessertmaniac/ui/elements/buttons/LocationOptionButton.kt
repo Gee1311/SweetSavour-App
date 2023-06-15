@@ -1,4 +1,4 @@
-package com.delusional_bear.dessertmaniac.ui.elements
+package com.delusional_bear.dessertmaniac.ui.elements.buttons
 
 import androidx.annotation.DrawableRes
 import androidx.annotation.StringRes
