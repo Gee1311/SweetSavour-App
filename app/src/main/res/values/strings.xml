@@ -1,6 +1,6 @@
 <resources>
-    <string name="app_name" translatable="false">DessertManiac</string>
-    <string name="app_name_on_home_screen" translatable="false">Dessert\nManiac</string>
+    <string name="app_name" translatable="false">SweetSavor</string>
+    <string name="app_name_on_home_screen" translatable="false">Sweet\nSavor</string>
     <string name="easy_chocolate_molten_cake">Easy chocolate molten cakes</string>
     <string name="salted_chocolate_hazelnut_brownies">Salted chocolate &amp; hazelnut brownies</string>
     <string name="chocolate_truffle_honeycomb_torte">Chocolate truffle &amp; honeycomb torte</string>
@@ -13,6 +13,53 @@
     <string name="blackberry_and_lemon_fool">Blackberry &amp; lemon fool</string>
     <string name="chocolate_tiffin">Chocolate tiffin</string>
     <string name="white_chocolate_cheesecake">White chocolate cheesecake</string>
+
+    <string name="gelatine">Gelatine</string>
+    <string name="milk">Milk</string>
+    <string name="caster_sugar">Caster sugar</string>
+    <string name="strawberry">Strawberry</string>
+    <string name="raspberry">Raspberry</string>
+    <string name="blackberry">Blackberry</string>
+    <string name="lemon">Lemon</string>
+    <string name="double_cream">Double cream</string>
+    <string name="butter">Butter</string>
+    <string name="eggs">Eggs</string>
+    <string name="dark_chocolate">Dark chocolate</string>
+    <string name="white_chocolate">White chocolate</string>
+    <string name="milk_chocolate">Milk chocolate</string>
+    <string name="mascarpone">Mascarpone</string>
+    <string name="soft_sugar">Soft sugar</string>
+    <string name="raisin">Raisin</string>
+    <string name="cream_cheese">Cream Cheese</string>
+    <string name="icing_sugar">Icing sugar</string>
+    <string name="custard_powder">Custard powder</string>
+    <string name="chopped_almonds">Chopped almonds</string>
+    <string name="desiccated_coconut">Desiccated coconut</string>
+    <string name="biscuits">Biscuits</string>
+    <string name="cocoa_powder">Cocoa powder</string>
+    <string name="syrup">Syrup</string>
+    <string name="softened_butter">Softened butter</string>
+    <string name="honey">Honey</string>
+    <string name="cornflakes">Cornflakes</string>
+    <string name="chocolate">Chocolate</string>
+    <string name="hazelnut">Hazelnut</string>
+    <string name="flour">Flour</string>
+    <string name="nuts">Nuts</string>
+    <string name="ice_cream">Ice cream</string>
+    <string name="caramel_sauce">Caramel sauce</string>
+    <string name="salt">Salt</string>
+    <string name="egg_yolks">Egg yolks</string>
+    <string name="water">Water</string>
+    <string name="ginger">Ginger</string>
+    <string name="breadcrumbs">Breadcrumbs</string>
+    <string name="peach">Peach</string>
+    <string name="cornflour">Cornflour</string>
+    <string name="vanilla">Vanilla</string>
+    <string name="muscovado_sugar">Muscovado sugar</string>
+    <string name="demerara_sugar">Demerara sugar</string>
+    <string name="pastry">Pastry</string>
+    <string name="jam">Jam</string>
+    <string name="custard">Custard</string>
 
     <string name="chocolate_truffle_honeycomb_ingredient_1">3 x 40g chocolate-covered honeycomb bar</string>
     <string name="chocolate_truffle_honeycomb_ingredient_2">100g cornflakes</string>
@@ -129,52 +176,89 @@
     <string name="confirm">Confirm</string>
     <string name="cancel">Cancel</string>
     <string name="rating">Rating</string>
+    <string name="rating_with_value">%s</string>
+    <string name="available_dessert">Good choice! Enjoy your meal</string>
 
     <string name="dessert_added">%s has been added to \"Favorites\"</string>
-    <string name="top_most_rated">Top most rated desserts</string>
-    <string name="all_desserts">All\ndesserts</string>
-    <string name="all_desserts_top_bar">All desserts</string>
-    <string name="top_most_popular">Top most popular desserts</string>
-    <string name="top_worst_rated">Top worst rated desserts</string>
+    <string name="all_desserts">All desserts</string>
+    <string name="popular">Popular desserts</string>
     <string name="location">Location</string>
     <string name="location_text">The list of locations where you can find our shops</string>
 
-    <string name="new_york">New York City, NY</string>
-    <string name="orlando">Orlando, FL</string>
-    <string name="austin">Austin, TX</string>
-    <string name="los_angeles">Los Angeles, CA</string>
-    <string name="portland">Portland, OR</string>
-    <string name="new_york_address">1st Avenue</string>
-    <string name="orlando_address">19th St</string>
-    <string name="austin_address">14 Tee Dr</string>
-    <string name="los_angeles_address">Aviation Way</string>
-    <string name="portland_address">37th Avenue</string>
+    <string translatable="false" name="new_york">New York City, NY</string>
+    <string translatable="false" name="orlando">Orlando, FL</string>
+    <string translatable="false" name="austin">Austin, TX</string>
+    <string translatable="false" name="los_angeles">Los Angeles, CA</string>
+    <string translatable="false" name="portland">Portland, OR</string>
+    <string translatable="false" name="new_york_address">1st Avenue</string>
+    <string translatable="false" name="orlando_address">19th St</string>
+    <string translatable="false" name="austin_address">14 Tee Dr</string>
+    <string translatable="false" name="los_angeles_address">Aviation Way</string>
+    <string translatable="false" name="portland_address">37th Avenue</string>
 
-    <string name="kyiv_obolon">Obolon, Kyiv</string>
-    <string name="lviv_kleparow">Kleparow, Lviv</string>
-    <string name="lviv_frankivskyi">Frankivskyi District, Lviv</string>
-    <string name="kyiv_address_1">Heroiv Dnipra St</string>
-    <string name="kyiv_address_2">Yordanska St</string>
-    <string name="lviv_address_1">Volodymyra Velykoho St</string>
-    <string name="lviv_address_2">Kleparowskya St</string>
-    <string name="shop_rating">%s</string>
-    <string name="shop_reviews">%s</string>
-    <string name="closed">Closed</string>
-    <string name="open">Open</string>
-    <string name="schedule">%1s - %2s</string>
+    <string translatable="false" name="kyiv_obolon">Obolon, Kyiv</string>
+    <string translatable="false" name="lviv_kleparow">Kleparow, Lviv</string>
+    <string translatable="false" name="lviv_frankivskyi">Frankivskyi District, Lviv</string>
+    <string translatable="false" name="kyiv_address_1">Heroiv Dnipra St</string>
+    <string translatable="false" name="kyiv_address_2">Yordanska St</string>
+    <string translatable="false" name="lviv_address_1">Volodymyra Velykoho St</string>
+    <string translatable="false" name="lviv_address_2">Kleparowskya St</string>
+    <string translatable="false" name="shop_rating">%s</string>
+    <string translatable="false" name="shop_reviews">%s</string>
+    <string translatable="false" name="closed">Closed</string>
+    <string translatable="false" name="open">Open</string>
+    <string translatable="false" name="schedule">%1s - %2s</string>
 
-    <string name="app_slogan_1">Indulge Your Sweet Side with DessertManiac: Your Tastebuds\' Ultimate Adventure!</string>
-    <string name="app_slogan_2">Indulge Your Sweet Tooth with DessertManiac: The Ultimate App for Confectionery Cravings!</string>
-    <string name="app_slogan_3">Indulge Your Sweet Tooth with DessertManiac: Unleash Your Inner Connoisseur!</string>
-    <string name="app_slogan_4">Indulge Your Sweet Tooth with DessertManiac: Satisfy Your Cravings, One Bite at a Time!</string>
-    <string name="app_slogan_5">Indulge Your Sweet Cravings with DessertManiac: Satisfy Your Treat Desires at Your Fingertips!</string>
+    // Countries
     <string name="united_states">United States</string>
     <string name="ukraine">Ukraine</string>
+    <string name="canada">Canada</string>
+    <string name="mexico">Mexico</string>
+    <string name="france">France</string>
+    <string name="poland">Poland</string>
+    <string name="germany">Germany</string>
+    <string name="estonia">Estonia</string>
+    <string name="spain">Spain</string>
+    <string name="switzerland">Switzerland</string>
+    <string name="italy">Italy</string>
+    <string name="czech_republic">Czech Republic</string>
+    <string name="south_korea">South Korea</string>
+    <string name="india">India</string>
+    <string name="indonesia">Indonesia</string>
+    <string name="taiwan">Taiwan</string>
+    <string name="japan">Japan</string>
+    <string name="columbia">Columbia</string>
+    <string name="argentina">Argentina</string>
+    <string name="chili">Chili</string>
+    <string name="peru">Peru</string>
+
     <string name="country">Country</string>
-    <string name="pick_up_your_country">Firstly, pick up your country</string>
-    <string name="directions">Directions</string>
-    <string name="reserve">Reserve</string>
-    <string name="menu">Menu</string>
-    <string name="call">Call</string>
-    <string name="save">Save</string>
+    <string translatable="false" name="directions">Directions</string>
+    <string translatable="false" name="reserve">Reserve</string>
+    <string translatable="false" name="menu">Menu</string>
+    <string translatable="false" name="call">Call</string>
+    <string translatable="false" name="save">Save</string>
+    <string translatable="false" name="order">Order</string>
+    <string name="items">%s items</string>
+    <string name="orders">Orders: %s</string>
+
+    <string name="asia">Asia</string>
+    <string name="north_america">North America</string>
+    <string name="south_america">South America</string>
+    <string name="europe">Europe</string>
+
+    <string name="user_avatar" translatable="false">User Avatar</string>
+    <string name="search">Search for your beloved desserts</string>
+    <string name="most_ordered">Most ordered desserts</string>
+    <string name="profile">Profile</string>
+    <string name="continent">Continent</string>
+    <string name="next">Next</string>
+    <string name="choose_continent">Choose Continent</string>
+    <string name="continent_chosen">Continent: %s</string>
+    <string name="user_name">Nikolay Ponomarenko</string>
+    <string name="user_occupation">Junior Mobile Developer</string>
+    <string name="my_account">My Account</string>
+    <string name="switch_account">Switch to Other Account</string>
+    <string name="log_out">Log Out</string>
+    <string name="log_out_text">Do you really want to log out?</string>
 </resources>

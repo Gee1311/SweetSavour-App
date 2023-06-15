@@ -9,7 +9,7 @@ import androidx.compose.material3.Surface
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
-import com.delusional_bear.dessertmaniac.ui.DessertManiacApp
+import com.delusional_bear.dessertmaniac.ui.SweetSavorApp
 import com.delusional_bear.dessertmaniac.ui.theme.DessertManiacTheme
 
 class MainActivity : ComponentActivity() {
@@ -21,7 +21,7 @@ class MainActivity : ComponentActivity() {
                     modifier = Modifier.fillMaxSize(),
                     color = MaterialTheme.colorScheme.background,
                 ) {
-                    DessertManiacApp()
+                    SweetSavorApp()
                 }
             }
         }
@@ -32,7 +32,7 @@ class MainActivity : ComponentActivity() {
 @Composable
 fun DessertManiacLightThemePreview() {
     DessertManiacTheme {
-        DessertManiacApp()
+        SweetSavorApp()
     }
 }
 
@@ -40,6 +40,6 @@ fun DessertManiacLightThemePreview() {
 @Composable
 fun DessertManiacDarkThemePreview() {
     DessertManiacTheme(darkTheme = true) {
-        DessertManiacApp()
+        SweetSavorApp()
     }
 }

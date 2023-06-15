@@ -1,4 +1,4 @@
-package com.delusional_bear.dessertmaniac.ui.elements
+package com.delusional_bear.dessertmaniac.ui.elements.dialogs
 
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
@@ -25,7 +25,7 @@ import com.delusional_bear.dessertmaniac.data.Dessert
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
-fun DessertManiacAlertDialog(
+fun DessertAlertDialog(
     modifier: Modifier = Modifier,
     dessert: Dessert,
     onDialogDismiss: () -> Unit,

@@ -3,6 +3,8 @@ package com.delusional_bear.dessertmaniac.data
 import androidx.annotation.StringRes
 import com.google.android.gms.maps.model.LatLng
 
+/** [Location] is a data class which represents a country's exact location of the shop */
+
 data class Location(
     @StringRes val locationName: Int,
     @StringRes val locationAddress: Int,
