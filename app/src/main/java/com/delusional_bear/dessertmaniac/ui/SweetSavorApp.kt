@@ -21,6 +21,7 @@ import androidx.navigation.compose.rememberNavController
 import com.delusional_bear.dessertmaniac.R
 import com.delusional_bear.dessertmaniac.data.SweetSavor
 import com.delusional_bear.dessertmaniac.model.DataSource.continentsList
+import com.delusional_bear.dessertmaniac.ui.elements.other.SweetBottomAppBar
 import com.delusional_bear.dessertmaniac.ui.elements.other.SweetTopAppBar
 import com.delusional_bear.dessertmaniac.ui.screens.ContinentsScreen
 import com.delusional_bear.dessertmaniac.ui.screens.CountriesScreen
@@ -45,7 +46,12 @@ fun SweetSavorApp(
                 currentScreenTitle = currentScreenTitle,
                 canNavigate = navController.previousBackStackEntry != null,
                 onNavigateUp = { navController.navigateUp() },
-                onAvatarClickNavigation = { navController.navigate(SweetSavor.Profile.name) }
+            )
+        },
+        bottomBar = {
+            SweetBottomAppBar(
+                onOrderClicked = { navController.navigate(SweetSavor.Continent.name) },
+                onProfileClicked = { navController.navigate(SweetSavor.Profile.name) },
             )
         },
         content = { paddingValues ->
@@ -61,7 +67,6 @@ fun SweetSavorApp(
                                 .fillMaxSize()
                                 .wrapContentHeight(Alignment.Bottom)
                                 .padding(bottom = dimensionResource(id = R.dimen.padding_large)),
-                            onFABCLick = { navController.navigate(SweetSavor.Continent.name) },
                             sweetSavorViewModel = viewModel,
                             sweetUiState = uiState,
                         )
@@ -87,19 +92,21 @@ fun SweetSavorApp(
 }
 
 private fun cancelAndNavigateBack(navController: NavHostController) {
-    navController.popBackStack(SweetSavor.Start.name, false)
+    navController.popBackStack(SweetSavor.Start.name, true)
 }
 
 @Preview
 @Composable
 private fun SweetSavorAppLightThemePreview() {
-    SweetSavorApp()
+    DessertManiacTheme {
+        SweetSavorApp()
+    }
 }
 
 @Preview
 @Composable
 private fun SweetSavorAppDarkThemePreview() {
-    DessertManiacTheme {
+    DessertManiacTheme(darkTheme = true) {
         SweetSavorApp()
     }
 }
