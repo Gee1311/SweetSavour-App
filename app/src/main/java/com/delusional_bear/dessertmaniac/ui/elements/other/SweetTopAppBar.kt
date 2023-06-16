@@ -27,7 +27,6 @@ fun SweetTopAppBar(
     currentScreenTitle: SweetSavor,
     canNavigate: Boolean,
     onNavigateUp: () -> Unit,
-    onAvatarClickNavigation: () -> Unit,
     modifier: Modifier = Modifier,
 ) {
     CenterAlignedTopAppBar(
@@ -42,12 +41,8 @@ fun SweetTopAppBar(
                 Text(
                     text = stringResource(id = currentScreenTitle.title),
                     style = MaterialTheme.typography.titleLarge,
-                    modifier = modifier.padding(end = dimensionResource(id = R.dimen.padding_small)),
                     fontFamily = tiltprism
                 )
-                if (!canNavigate) {
-                    UserAvatar(avatar = R.drawable.user_avatar) { onAvatarClickNavigation() }
-                }
             }
         },
         modifier = modifier,

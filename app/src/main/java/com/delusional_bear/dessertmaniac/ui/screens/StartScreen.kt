@@ -19,7 +19,6 @@ import com.delusional_bear.dessertmaniac.R
 import com.delusional_bear.dessertmaniac.data.SweetUiState
 import com.delusional_bear.dessertmaniac.model.DataSource
 import com.delusional_bear.dessertmaniac.ui.SweetSavorViewModel
-import com.delusional_bear.dessertmaniac.ui.elements.buttons.SweetFloatingActionButton
 import com.delusional_bear.dessertmaniac.ui.elements.lists.MostOrderedList
 import com.delusional_bear.dessertmaniac.ui.elements.textfields.SearchDessertTextField
 import com.delusional_bear.dessertmaniac.ui.theme.DessertManiacTheme
@@ -29,7 +28,6 @@ fun StartScreen(
     modifier: Modifier = Modifier,
     sweetSavorViewModel: SweetSavorViewModel,
     sweetUiState: SweetUiState,
-    onFABCLick: () -> Unit,
 ) {
     val context = LocalContext.current
     val focusManager = LocalFocusManager.current
@@ -57,7 +55,6 @@ fun StartScreen(
             modifier = Modifier.padding(bottom = dimensionResource(id = R.dimen.padding_medium))
         )
         MostOrderedList(mostOrderedList = DataSource.mostOrderedDessertsList)
-        SweetFloatingActionButton { onFABCLick() }
     }
 }
 
@@ -66,7 +63,6 @@ fun StartScreen(
 private fun StartScreenLightThemePreview() {
     DessertManiacTheme {
         StartScreen(
-            onFABCLick = {},
             sweetSavorViewModel = SweetSavorViewModel(),
             sweetUiState = SweetUiState()
         )
@@ -77,7 +73,6 @@ private fun StartScreenLightThemePreview() {
 private fun StartScreenDarkThemePreview() {
     DessertManiacTheme(darkTheme = true) {
         StartScreen(
-            onFABCLick = {},
             sweetSavorViewModel = SweetSavorViewModel(),
             sweetUiState = SweetUiState()
         )
