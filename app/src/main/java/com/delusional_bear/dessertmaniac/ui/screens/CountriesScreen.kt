@@ -22,7 +22,7 @@ fun CountriesScreen(
 @Composable
 private fun CountriesScreenLightThemePreview() {
     DessertManiacTheme {
-        CountriesScreen(SweetUiState(false, "Asia"))
+        CountriesScreen(SweetUiState())
     }
 }
 
@@ -30,6 +30,6 @@ private fun CountriesScreenLightThemePreview() {
 @Composable
 private fun CountriesScreenDarkThemePreview() {
     DessertManiacTheme(darkTheme = true) {
-        CountriesScreen(SweetUiState(false, "Europe"))
+        CountriesScreen(SweetUiState())
     }
 }
