@@ -26,8 +26,9 @@ import com.delusional_bear.dessertmaniac.ui.theme.tiltprism
 fun SweetTopAppBar(
     currentScreenTitle: SweetSavor,
     canNavigate: Boolean,
-    onNavigateUp: () -> Unit,
     modifier: Modifier = Modifier,
+    onNavigateUp: () -> Unit,
+    onProfileClicked: () -> Unit,
 ) {
     CenterAlignedTopAppBar(
         title = {
@@ -43,6 +44,7 @@ fun SweetTopAppBar(
                     style = MaterialTheme.typography.titleLarge,
                     fontFamily = tiltprism
                 )
+                if (!canNavigate) UserAvatar(avatar = R.drawable.user_avatar) { onProfileClicked() }
             }
         },
         modifier = modifier,
