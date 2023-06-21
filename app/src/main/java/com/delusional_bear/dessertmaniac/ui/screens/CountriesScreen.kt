@@ -6,7 +6,7 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.tooling.preview.Preview
 import com.delusional_bear.dessertmaniac.R
-import com.delusional_bear.dessertmaniac.data.SweetUiState
+import com.delusional_bear.dessertmaniac.ui.SweetUiState
 import com.delusional_bear.dessertmaniac.ui.theme.DessertManiacTheme
 
 @Composable

@@ -23,7 +23,7 @@ import androidx.compose.ui.res.dimensionResource
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.tooling.preview.Preview
 import com.delusional_bear.dessertmaniac.R
-import com.delusional_bear.dessertmaniac.model.DataSource
+import com.delusional_bear.dessertmaniac.data.model.DataSource
 import com.delusional_bear.dessertmaniac.ui.theme.DessertManiacTheme
 
 @Composable

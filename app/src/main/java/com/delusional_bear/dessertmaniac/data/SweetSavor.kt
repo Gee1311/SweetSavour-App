@@ -11,4 +11,5 @@ enum class SweetSavor(@StringRes val title: Int) {
     Continent(title = R.string.continent),
     Country(title = R.string.country),
     Profile(title = R.string.profile),
+    Desserts(title = R.string.desserts),
 }
