@@ -1,20 +1,22 @@
-package com.delusional_bear.dessertmaniac.model
+package com.delusional_bear.dessertmaniac.data.model
 
 import com.delusional_bear.dessertmaniac.R
+import com.delusional_bear.dessertmaniac.common_functions.convertDoubleToCurrency
 import com.delusional_bear.dessertmaniac.data.Continent
 import com.delusional_bear.dessertmaniac.data.Country
 import com.delusional_bear.dessertmaniac.data.Dessert
 import com.delusional_bear.dessertmaniac.data.Location
-import com.delusional_bear.dessertmaniac.data.MostOrderedDessert
 
 /**
  * [DataSource] object with the list of [Dessert] objects
  */
 
 object DataSource {
+
     /**
      * [dessertList] represents a list of all desserts that are available
      */
+
     val dessertList = listOf(
         Dessert(
             R.string.chocolate_truffle_honeycomb_torte,
@@ -27,6 +29,8 @@ object DataSource {
                 R.string.double_cream,
             ),
             4.0,
+            convertDoubleToCurrency(4.99),
+            124
         ),
         Dessert(
             R.string.peach_melba_pie,
@@ -41,6 +45,8 @@ object DataSource {
                 R.string.double_cream,
             ),
             5.0,
+            convertDoubleToCurrency(6.99),
+            259
         ),
         Dessert(
             R.string.treacle_tart,
@@ -59,6 +65,8 @@ object DataSource {
                 R.string.breadcrumbs,
             ),
             4.0,
+            convertDoubleToCurrency(3.99),
+            653
         ),
         Dessert(
             R.string.salted_chocolate_hazelnut_brownies,
@@ -75,6 +83,8 @@ object DataSource {
                 R.string.eggs,
             ),
             5.0,
+            convertDoubleToCurrency(7.99),
+            421
         ),
         Dessert(
             R.string.easy_cornflake_tart,
@@ -90,6 +100,8 @@ object DataSource {
                 R.string.custard,
             ),
             5.0,
+            convertDoubleToCurrency(4.99),
+            123
         ),
         Dessert(
             R.string.floating_islands,
@@ -105,6 +117,8 @@ object DataSource {
                 R.string.caster_sugar,
             ),
             3.0,
+            convertDoubleToCurrency(5.99),
+            985
         ),
         Dessert(
             R.string.blackberry_and_lemon_fool,
@@ -116,6 +130,8 @@ object DataSource {
                 R.string.double_cream,
             ),
             4.0,
+            convertDoubleToCurrency(4.49),
+            321
         ),
         Dessert(
             R.string.chocolate_tiffin,
@@ -131,6 +147,8 @@ object DataSource {
                 R.string.dark_chocolate,
             ),
             5.0,
+            convertDoubleToCurrency(8.99),
+            190
         ),
         Dessert(
             R.string.nanaimo_bars,
@@ -150,6 +168,8 @@ object DataSource {
                 R.string.butter,
             ),
             4.0,
+            convertDoubleToCurrency(8.99),
+            421
         ),
         Dessert(
             R.string.white_chocolate_cheesecake,
@@ -164,6 +184,8 @@ object DataSource {
                 R.string.strawberry,
             ),
             4.0,
+            convertDoubleToCurrency(5.49),
+            665
         ),
         Dessert(
             R.string.vanilla_panna_cotta,
@@ -177,12 +199,14 @@ object DataSource {
                 R.string.double_cream,
             ),
             5.0,
+            convertDoubleToCurrency(3.49),
+            123
         ),
     ).toList().sortedByDescending { it.rating }
 
     /** [continentsList] is a list that holds [Continent] objects
      * that represent the continent and its countries(Europe, Asia, North America, etc.)
-     * */
+     */
 
     val continentsList = listOf(
         Continent(
@@ -459,77 +483,4 @@ object DataSource {
         Pair(R.drawable.call, R.string.call),
         Pair(R.drawable.bookmark, R.string.save),
     ).toList()
-
-    val mostOrderedDessertsList = mutableListOf(
-        MostOrderedDessert(
-            R.string.vanilla_panna_cotta,
-            R.drawable.vanilla_panna_cotta,
-            listOf(
-                R.string.vanilla_panna_cotta_ingredient_1,
-                R.string.vanilla_panna_cotta_ingredient_2,
-                R.string.vanilla_panna_cotta_ingredient_3,
-                R.string.vanilla_panna_cotta_ingredient_4,
-                R.string.vanilla_panna_cotta_ingredient_5,
-                R.string.vanilla_panna_cotta_ingredient_6,
-                R.string.vanilla_panna_cotta_ingredient_7,
-            ),
-            4.3,
-            1201,
-        ),
-        MostOrderedDessert(
-            R.string.white_chocolate_cheesecake,
-            R.drawable.white_chocolate_cheesecake,
-            listOf(
-                R.string.white_chocolate_cheesecake_ingredient_1,
-                R.string.white_chocolate_cheesecake_ingredient_2,
-                R.string.white_chocolate_cheesecake_ingredient_3,
-                R.string.white_chocolate_cheesecake_ingredient_4,
-                R.string.white_chocolate_cheesecake_ingredient_5,
-                R.string.white_chocolate_cheesecake_ingredient_6,
-                R.string.white_chocolate_cheesecake_ingredient_7,
-            ),
-            5.0,
-            762,
-        ),
-        MostOrderedDessert(
-            R.string.blackberry_and_lemon_fool,
-            R.drawable.blackberry_and_lemon_fool,
-            listOf(
-                R.string.blackberry_and_lemon_fool_ingredient_1,
-                R.string.blackberry_and_lemon_fool_ingredient_2,
-                R.string.blackberry_and_lemon_fool_ingredient_3,
-                R.string.blackberry_and_lemon_fool_ingredient_4,
-            ),
-            4.7,
-            896,
-        ),
-        MostOrderedDessert(
-            R.string.chocolate_truffle_honeycomb_torte,
-            R.drawable.chocolate_truffle_and_honeycomb_torte,
-            listOf(
-                R.string.chocolate_truffle_honeycomb_ingredient_1,
-                R.string.chocolate_truffle_honeycomb_ingredient_2,
-                R.string.chocolate_truffle_honeycomb_ingredient_3,
-                R.string.chocolate_truffle_honeycomb_ingredient_4,
-                R.string.chocolate_truffle_honeycomb_ingredient_5,
-            ),
-            5.0,
-            992,
-        ),
-        MostOrderedDessert(
-            R.string.chocolate_tiffin,
-            R.drawable.chocolate_tiffin,
-            listOf(
-                R.string.chocolate_tiffin_ingredient_1,
-                R.string.chocolate_tiffin_ingredient_2,
-                R.string.chocolate_tiffin_ingredient_3,
-                R.string.chocolate_tiffin_ingredient_4,
-                R.string.chocolate_tiffin_ingredient_5,
-                R.string.chocolate_tiffin_ingredient_6,
-                R.string.chocolate_tiffin_ingredient_7,
-            ),
-            5.0,
-            1214,
-        ),
-    ).shuffled()
 }

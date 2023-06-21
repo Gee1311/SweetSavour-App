@@ -261,4 +261,16 @@
     <string name="switch_account">Switch to Other Account</string>
     <string name="log_out">Log Out</string>
     <string name="log_out_text">Do you really want to log out?</string>
+    <string name="choose_account_to_switch">Choose an account to switch</string>
+    <string name="total_order_number">Total orders: %s</string>
+    <string name="buy_now">Buy Now</string>
+
+    <string name="user_first_name_1">Nikolay</string>
+    <string name="user_last_name_1">Ponomarenko</string>
+    <string name="email_1">fallinkotlin@gmail.com</string>
+    <string name="user_first_name_2">Nikolay</string>
+    <string name="email_2">nikolayponomarenko1843@gmail.com</string>
+    <string name="email_3">layrendev2003@gmail.com</string>
+    <string name="accept">Accept</string>
+    <string name="desserts">Desserts</string>
 </resources>

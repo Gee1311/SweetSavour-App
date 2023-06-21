@@ -23,7 +23,7 @@ import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 import com.delusional_bear.dessertmaniac.R
 import com.delusional_bear.dessertmaniac.data.Location
-import com.delusional_bear.dessertmaniac.model.DataSource
+import com.delusional_bear.dessertmaniac.data.model.DataSource
 import com.delusional_bear.dessertmaniac.ui.elements.texts.ClosedOrOpenText
 import com.delusional_bear.dessertmaniac.ui.elements.buttons.DirectionButton
 import com.delusional_bear.dessertmaniac.ui.elements.buttons.LocationOptionButton

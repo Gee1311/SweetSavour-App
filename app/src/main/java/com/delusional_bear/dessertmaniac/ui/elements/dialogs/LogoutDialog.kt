@@ -14,8 +14,10 @@ import androidx.compose.material3.Surface
 import androidx.compose.material3.Text
 import androidx.compose.material3.TextButton
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
+import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.res.stringResource
@@ -27,10 +29,10 @@ import com.delusional_bear.dessertmaniac.ui.theme.DessertManiacTheme
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
 fun LogoutDialog(modifier: Modifier = Modifier) {
-    val openDialog = remember { mutableStateOf(true) }
-    if (openDialog.value) {
+    var openDialog by remember { mutableStateOf(true) }
+    if (openDialog) {
         AlertDialog(
-            onDismissRequest = { openDialog.value = false }
+            onDismissRequest = { openDialog = !openDialog }
         ) {
             Surface(
                 modifier = modifier.wrapContentSize(),
@@ -46,13 +48,13 @@ fun LogoutDialog(modifier: Modifier = Modifier) {
                     Row(modifier = Modifier.align(Alignment.End)) {
                         TextButton(
                             onClick = {
-                                openDialog.value = false
+                                openDialog = false
                             }
                         ) {
                             ButtonText(text = R.string.cancel)
                         }
                         TextButton(
-                            onClick = { openDialog.value = false }
+                            onClick = { openDialog = false }
                         ) {
                             ButtonText(text = R.string.confirm)
                         }
