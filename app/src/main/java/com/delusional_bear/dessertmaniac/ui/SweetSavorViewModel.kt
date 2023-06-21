@@ -6,8 +6,7 @@ import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.setValue
 import androidx.compose.ui.focus.FocusManager
 import androidx.lifecycle.ViewModel
-import com.delusional_bear.dessertmaniac.data.SweetUiState
-import com.delusional_bear.dessertmaniac.model.DataSource
+import com.delusional_bear.dessertmaniac.data.model.DataSource
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.StateFlow
 import kotlinx.coroutines.flow.asStateFlow
