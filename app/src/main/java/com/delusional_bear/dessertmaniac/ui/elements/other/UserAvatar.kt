@@ -12,16 +12,17 @@ import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.unit.dp
+import coil.compose.AsyncImage
 import com.delusional_bear.dessertmaniac.R
 
 @Composable
 fun UserAvatar(
-    @DrawableRes avatar: Int,
+    avatarURL: String,
     modifier: Modifier = Modifier,
     onClick: () -> Unit,
 ) {
-    Image(
-        painter = painterResource(id = avatar),
+    AsyncImage(
+        model = avatarURL,
         contentDescription = stringResource(id = R.string.user_avatar),
         modifier = modifier
             .size(48.dp)

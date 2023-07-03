@@ -6,7 +6,6 @@ import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
 import androidx.compose.material.icons.Icons
-import androidx.compose.material.icons.filled.AccountBox
 import androidx.compose.material.icons.filled.Favorite
 import androidx.compose.material.icons.filled.Home
 import androidx.compose.material.icons.filled.ShoppingCart
@@ -17,6 +16,7 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.res.dimensionResource
+import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import com.delusional_bear.dessertmaniac.R
@@ -29,7 +29,7 @@ fun SweetBottomAppBar(
     onHomeClicked: () -> Unit = {},
     onCartClicked: () -> Unit = {},
     onFavoritesClicked: () -> Unit = {},
-    onProfileClicked: () -> Unit = {},
+    onListOfDessertsClicked: () -> Unit = {},
     onOrderClicked: () -> Unit = {},
 ) {
     BottomAppBar(
@@ -66,14 +66,14 @@ fun SweetBottomAppBar(
                             contentDescription = null,
                         )
                     }
-                    IconButton(onClick = onProfileClicked) {
+                    IconButton(onClick = onListOfDessertsClicked) {
                         Icon(
-                            imageVector = Icons.Default.AccountBox,
+                            painter = painterResource(id = R.drawable.list_icon),
                             contentDescription = null,
                         )
                     }
                 }
-                SweetFloatingActionButton() {
+                SweetFloatingActionButton {
                     onOrderClicked()
                 }
             }

@@ -16,7 +16,7 @@ import androidx.compose.ui.res.dimensionResource
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.unit.sp
 import com.delusional_bear.dessertmaniac.R
-import com.delusional_bear.dessertmaniac.ui.SweetSavorViewModel
+import com.delusional_bear.dessertmaniac.ui.sweetsavor.SweetSavorViewModel
 
 @Composable
 fun SearchDessertTextField(
@@ -56,5 +56,6 @@ fun SearchDessertTextField(
         keyboardActions = keyboardActions,
         keyboardOptions = keyboardOptions,
         singleLine = true,
+        textStyle = MaterialTheme.typography.titleSmall,
     )
 }

@@ -16,15 +16,16 @@ import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.input.ImeAction
 import androidx.compose.ui.tooling.preview.Preview
 import com.delusional_bear.dessertmaniac.R
-import com.delusional_bear.dessertmaniac.data.SweetUiState
-import com.delusional_bear.dessertmaniac.model.DataSource
-import com.delusional_bear.dessertmaniac.ui.SweetSavorViewModel
-import com.delusional_bear.dessertmaniac.ui.elements.lists.MostOrderedList
+import com.delusional_bear.dessertmaniac.data.model.DataSource
+import com.delusional_bear.dessertmaniac.ui.sweetsavor.SweetSavorViewModel
+import com.delusional_bear.dessertmaniac.ui.sweetsavor.SweetUiState
+import com.delusional_bear.dessertmaniac.ui.elements.pagers.DessertsLazyRow
 import com.delusional_bear.dessertmaniac.ui.elements.textfields.SearchDessertTextField
 import com.delusional_bear.dessertmaniac.ui.theme.DessertManiacTheme
+import kotlin.random.Random
 
 @Composable
-fun StartScreen(
+fun HomeScreen(
     modifier: Modifier = Modifier,
     sweetSavorViewModel: SweetSavorViewModel,
     sweetUiState: SweetUiState,
@@ -54,7 +55,16 @@ fun StartScreen(
             style = MaterialTheme.typography.headlineMedium,
             modifier = Modifier.padding(bottom = dimensionResource(id = R.dimen.padding_medium))
         )
-        MostOrderedList(mostOrderedList = DataSource.mostOrderedDessertsList)
+        DessertsLazyRow(
+            dessertList = DataSource.dessertList
+                .filter { it.totalNumberOfOrders >= 650 }
+                .sortedByDescending { it.totalNumberOfOrders },
+            onAddToCartButtonClick = {
+                sweetSavorViewModel.addToCart(it)
+            }
+        ) {
+            sweetSavorViewModel.addToFavorites(it)
+        }
     }
 }
 
@@ -62,7 +72,7 @@ fun StartScreen(
 @Composable
 private fun StartScreenLightThemePreview() {
     DessertManiacTheme {
-        StartScreen(
+        HomeScreen(
             sweetSavorViewModel = SweetSavorViewModel(),
             sweetUiState = SweetUiState()
         )
@@ -72,7 +82,7 @@ private fun StartScreenLightThemePreview() {
 @Composable
 private fun StartScreenDarkThemePreview() {
     DessertManiacTheme(darkTheme = true) {
-        StartScreen(
+        HomeScreen(
             sweetSavorViewModel = SweetSavorViewModel(),
             sweetUiState = SweetUiState()
         )
