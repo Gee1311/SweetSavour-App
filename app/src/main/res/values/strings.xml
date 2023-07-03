@@ -66,6 +66,7 @@
     <string name="chocolate_truffle_honeycomb_ingredient_3">500g dark chocolate (at least 70% cocoa solids), broken into small pieces</string>
     <string name="chocolate_truffle_honeycomb_ingredient_4">3 tbsp golden syrup</string>
     <string name="chocolate_truffle_honeycomb_ingredient_5">400ml double cream</string>
+    <string name="chocolate_truffle_honeycomb_description">Try this easy no-bake dessert which uses just five ingredients. As well as looking great as a centrepiece, it‘s easy to carry to a gathering.</string>
 
     <string name="easy_chocolate_molten_cake_ingredient_1">3 x 40g chocolate-covered honeycomb bar</string>
     <string name="easy_chocolate_molten_cake_ingredient_2">100g cornflakes</string>
@@ -74,6 +75,7 @@
     <string name="easy_chocolate_molten_cake_ingredient_5">400ml double cream</string>
     <string name="easy_chocolate_molten_cake_ingredient_6">3 tbsp golden syrup</string>
     <string name="easy_chocolate_molten_cake_ingredient_7">400ml double cream</string>
+    <string name="easy_chocolate_molten_cake_description">Bake an impressive dinner party dessert with minimum fuss – these chocolate puddings, also known as chocolate fondant or lava cake, have a lovely gooey centre</string>
 
     <string name="salted_chocolate_hazelnut_brownies_ingredient_1">100g slightly salted butter, cut into small pieces, plus extra for the tin</string>
     <string name="salted_chocolate_hazelnut_brownies_ingredient_2">200g 70% dark chocolate, broken into chunks</string>
@@ -83,6 +85,7 @@
     <string name="salted_chocolate_hazelnut_brownies_ingredient_6">100g toasted pecan nuts, roughly chopped</string>
     <string name="salted_chocolate_hazelnut_brownies_ingredient_7">ice cream and caramel sauce, to serve</string>
     <string name="salted_chocolate_hazelnut_brownies_ingredient_8">3 eggs, beaten</string>
+    <string name="salted_chocolate_hazelnut_brownies_description">Chocolate hazelnut spread ensures these moreish brownies have a fudgy centre. Flecked with pecans and sea salt - they\'ll be the new go-to brownie recipe</string>
 
     <string name="treacle_tart_ingredient_1">250g plain flour</string>
     <string name="treacle_tart_ingredient_2">140g cold unsalted butter, cubed</string>
@@ -95,6 +98,7 @@
     <string name="treacle_tart_ingredient_9">1 lemon, zested</string>
     <string name="treacle_tart_ingredient_10">2 medium eggs, lightly beaten</string>
     <string name="treacle_tart_ingredient_11">100g fine fresh white breadcrumbs</string>
+    <string name="treacle_tart_description">Treat family and friends to a comforting treacle tart with crumbly pastry and rich filling. A classic British dessert, serve with ice cream or clotted cream</string>
 
     <string name="peach_melba_pie_ingredient_1">175g self-raising flour, plus extra for dusting</string>
     <string name="peach_melba_pie_ingredient_2">175g white spelt flour</string>
@@ -110,6 +114,7 @@
     <string name="peach_melba_pie_ingredient_12">1 egg, beaten</string>
     <string name="peach_melba_pie_ingredient_13">2 tbsp demerara sugar</string>
     <string name="peach_melba_pie_ingredient_14">vanilla ice cream or whipped cream, to serve</string>
+    <string name="peach_melba_pie_description">Have some raspberries that are a little past their best? Use them to make this fabulous Peach Melba pie – a wonderful combination of raspberries and peaches</string>
 
     <string name="easy_cornflake_tart_ingredient_1">320g ready-rolled shortcrust pastry</string>
     <string name="easy_cornflake_tart_ingredient_2">plain flour, to dust</string>
@@ -119,6 +124,7 @@
     <string name="easy_cornflake_tart_ingredient_6">100g cornflakes</string>
     <string name="easy_cornflake_tart_ingredient_7">125g strawberry or raspberry jam</string>
     <string name="easy_cornflake_tart_ingredient_8">custard, to serve</string>
+    <string name="easy_cornflake_tart_description">Make this cornflake cake for a fabulously easy family dessert that uses simple ingredients. With a pastry case and jam base, it\'s delicious served with custard</string>
 
     <string name="floating_islands_ingredient_1">500ml whole milk</string>
     <string name="floating_islands_ingredient_2">2 tsp vanilla bean paste</string>
@@ -128,11 +134,13 @@
     <string name="floating_islands_ingredient_6">50g caster sugar</string>
     <string name="floating_islands_ingredient_7">200ml whole milk</string>
     <string name="floating_islands_ingredient_8">50g caster sugar</string>
+    <string name="floating_islands_description">Whip up some floating islands at your next dinner party, the retro-cool French dessert featuring crème anglaise, meringue and caramel</string>
 
     <string name="blackberry_and_lemon_fool_ingredient_1">200g blackberries, plus extra for the topping</string>
     <string name="blackberry_and_lemon_fool_ingredient_2">3 tbsp icing sugar</string>
     <string name="blackberry_and_lemon_fool_ingredient_3">zest and juice of ½ a lemon</string>
     <string name="blackberry_and_lemon_fool_ingredient_4">250ml double cream</string>
+    <string name="blackberry_and_lemon_fool_description">Create this delicious pudding in just 10 minutes, then pop it in the fridge. Serve in glasses and garnish with fresh blackberries for an elegant summer dessert</string>
 
     <string name="chocolate_tiffin_ingredient_1">150g butter, cubed, plus extra for the tin</string>
     <string name="chocolate_tiffin_ingredient_2">3 tbsp caster sugar</string>
@@ -142,6 +150,7 @@
     <string name="chocolate_tiffin_ingredient_6">handful of raisins</string>
     <string name="chocolate_tiffin_ingredient_7">110g milk chocolate</string>
     <string name="chocolate_tiffin_ingredient_8">110g dark chocolate</string>
+    <string name="chocolate_tiffin_description">Go all out and treat yourself to these chocolate tiffin slices, full of milk and dark chocolate, raisins and biscuit. Be warned: they won\'t last long!</string>
 
     <string name="white_chocolate_cheesecake_ingredient_1">300g digestive biscuits</string>
     <string name="white_chocolate_cheesecake_ingredient_2">150g unsalted butter, melted, plus extra to grease</string>
@@ -150,6 +159,7 @@
     <string name="white_chocolate_cheesecake_ingredient_5">250g mascarpone</string>
     <string name="white_chocolate_cheesecake_ingredient_6">300ml double cream</string>
     <string name="white_chocolate_cheesecake_ingredient_7">200g strawberries or raspberries, to serve</string>
+    <string name="white_chocolate_cheesecake_description">Make a simple, creamy dessert for a dinner party with very little effort. Pairing this white chocolate cheesecake with fresh fruit offsets the richness</string>
 
     <string name="nanaimo_bars_ingredient_1">125g softened butter</string>
     <string name="nanaimo_bars_ingredient_2">50g caster sugar</string>
@@ -164,6 +174,7 @@
     <string name="nanaimo_bars_ingredient_11">250g icing sugar</string>
     <string name="nanaimo_bars_ingredient_12">150g dark chocolate</string>
     <string name="nanaimo_bars_ingredient_13">50g butter</string>
+    <string name="nanaimo_bars_description">Need ideas for a coffee morning or afternoon tea? These bars from Canada are so moreish, with a crunchy biscuit base, custard layer and chocolate topping</string>
 
     <string name="vanilla_panna_cotta_ingredient_1">2 ½ sheets gelatine</string>
     <string name="vanilla_panna_cotta_ingredient_2">150ml milk</string>
@@ -172,6 +183,7 @@
     <string name="vanilla_panna_cotta_ingredient_5">fresh strawberries, to serve</string>
     <string name="vanilla_panna_cotta_ingredient_6">400ml double cream</string>
     <string name="vanilla_panna_cotta_ingredient_7">strawberry compote, to serve</string>
+    <string name="vanilla_panna_cotta_description">Try making this classic Italian dessert with delicate vanilla and a fresh strawberry topping. The perfect light sweet for a chilled summer gathering</string>
 
     <string name="confirm">Confirm</string>
     <string name="cancel">Cancel</string>
@@ -229,7 +241,7 @@
     <string name="japan">Japan</string>
     <string name="columbia">Columbia</string>
     <string name="argentina">Argentina</string>
-    <string name="chili">Chili</string>
+    <string name="chile">Chile</string>
     <string name="peru">Peru</string>
 
     <string name="country">Country</string>
@@ -253,14 +265,14 @@
     <string name="profile">Profile</string>
     <string name="continent">Continent</string>
     <string name="next">Next</string>
-    <string name="choose_continent">Choose Continent</string>
+    <string name="choose_continent">Select one of the four continents where our shops are available</string>
     <string name="continent_chosen">Continent: %s</string>
-    <string name="user_name">Nikolay Ponomarenko</string>
-    <string name="user_occupation">Junior Mobile Developer</string>
+    <string name="user_name">Ron DeSantis</string>
+    <string name="user_occupation">America Saver</string>
     <string name="my_account">My Account</string>
     <string name="switch_account">Switch to Other Account</string>
-    <string name="log_out">Log Out</string>
-    <string name="log_out_text">Do you really want to log out?</string>
+    <string name="sign_out">Sign Out</string>
+    <string name="sign_out_text">Do you really want to sign out?</string>
     <string name="choose_account_to_switch">Choose an account to switch</string>
     <string name="total_order_number">Total orders: %s</string>
     <string name="buy_now">Buy Now</string>
@@ -273,4 +285,75 @@
     <string name="email_3">layrendev2003@gmail.com</string>
     <string name="accept">Accept</string>
     <string name="desserts">Desserts</string>
+
+    <string name="add_to_cart">Add to Cart</string>
+    <string name="minus">-</string>
+    <string name="plus">+</string>
+    <string name="delivery_time_text">Delivery time</string>
+    <string name="delivery_time">%d Min</string>
+    <string name="favorites">Favorites</string>
+    <string name="shopping_cart">Cart</string>
+    <string name="damson_crumble_description">This damson and apple crumble will go down a treat as a family dessert. The damsons will contain stones, so remember to warn people to remove them as they eat</string>
+    <string name="damson_crumble">Damson crumble</string>
+    <string name="chocolate_and_malt_loaf_torte">Chocolate &amp; malt loaf torte</string>
+    <string name="chocolate_and_malt_loaf_torte_description">Don’t be deceived by how easy this is to make – the result is a rich, dense cake with a malted coating. Eat it warm as a pudding or serve it with afternoon tea</string>
+    <string name="raspberry_brulee">Raspberry brûlée</string>
+    <string name="raspberry_brulee_description">Celebrate raspberry season with this take on crème brûlée. The sharp tang of this red fruit cuts through a rich custard base for the perfect summer dessert</string>
+    <string name="chocolate_hazelnut_ice_cream_cheesecake">Chocolate hazelnut ice cream cheesecake</string>
+    <string name="chocolate_hazelnut_ice_cream_cheesecake_description">No one will guess that this easy, rich and creamy no-cook, make-ahead cheesecake uses only 4 ingredients - ideal for a dinner party</string>
+    <string name="black_forest_tart">Black Forest tart</string>
+    <string name="black_forest_tart_description">Sweet cocoa pastry is filled with a rich, fruity filling of chocolate and cherries in this heavenly German gateau-inspired dessert</string>
+    <string name="raspberry_pistachio_parfait">Raspberry &amp; pistachio parfait</string>
+    <string name="new_york_cheesecake">New York cheesecake</string>
+    <string name="new_york_cheesecake_description">This authentic creamy dessert will add a taste of New York to any dining table. Our American-style baked cheesecake recipe makes an easy family dessert.</string>
+    <string name="personal_data">Personal Data</string>
+    <string name="settings">Settings</string>
+    <string name="refferal_code">Refferal Code</string>
+    <string name="faq">FAQs</string>
+    <string name="community">Community</string>
+    <string name="feel_free_to_ask">Feel Free to Ask, We Ready to Help</string>
+    <string name="your_name">Your Name</string>
+    <string name="date_of_birth">Date of Birth</string>
+    <string name="your_job">Your Job</string>
+    <string name="monthly_income">Monthly Income</string>
+    <string name="input_name">Input your name</string>
+    <string name="input_date">Input your date of birth</string>
+    <string name="input_job">Input your job</string>
+    <string name="input_income">Input your income</string>
+    <string name="gender">Gender</string>
+    <string name="male">Male</string>
+    <string name="female">Female</string>
+
+    <string name="dessert_rating">Rating: %s</string>
+    <string name="rating_1">%s</string>
+    <string name="list_of_countries">Here is the list of countries where you can order our the most delicious desserts</string>
+    <string name="available_shops">Available shops: %s</string>
+    <string name="description">Description</string>
+    <string name="damsons">Damsons</string>
+    <string name="brown_sugar">Brown sugar</string>
+    <string name="sloe_gin">Sloe gin</string>
+    <string name="apples">Apples</string>
+    <string name="almonds">Almonds</string>
+    <string name="malt_loaf">Malf loaf</string>
+    <string name="cream_fraiche">Crème fraîche</string>
+    <string name="vanilla_pod">Vanilla pod</string>
+    <string name="chocolate_hazelnut">Chocolate hazelnut</string>
+    <string name="sugar">Sugar</string>
+    <string name="philadelphia_cheese">Philadelphia cheese</string>
+    <string name="lemon_juice">Lemon juice</string>
+    <string name="soured_cream">Soured cream</string>
+    <string name="cherry">Cherry</string>
+    <string name="oil">oil</string>
+    <string name="pistachios">Pistachios</string>
+    <string name="free_shipping">Free Shipping For Ukrainians</string>
+    <string name="count">%s</string>
+    <string name="sub_total_text">Sub Total:</string>
+    <string name="sub_total_price">%s</string>
+    <string name="shipping_text">Shipping:</string>
+    <string name="shipping_price">%s</string>
+    <string name="total_text">Total: (%s items)</string>
+    <string name="total_price">%s</string>
+    <string name="proceed_to_checkout">Proceed To Checkout</string>
+    <string name="discount">Discount:</string>
+    <string name="balance">Balance</string>
 </resources>
