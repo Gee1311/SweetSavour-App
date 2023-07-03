@@ -1,4 +1,4 @@
-package com.delusional_bear.dessertmaniac
+package com.delusional_bear.dessertmaniac.ui.sweetsavor
 
 import android.os.Bundle
 import androidx.activity.ComponentActivity
@@ -9,7 +9,6 @@ import androidx.compose.material3.Surface
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
-import com.delusional_bear.dessertmaniac.ui.SweetSavorApp
 import com.delusional_bear.dessertmaniac.ui.theme.DessertManiacTheme
 
 class MainActivity : ComponentActivity() {
@@ -28,18 +27,3 @@ class MainActivity : ComponentActivity() {
     }
 }
 
-@Preview
-@Composable
-fun DessertManiacLightThemePreview() {
-    DessertManiacTheme {
-        SweetSavorApp()
-    }
-}
-
-@Preview
-@Composable
-fun DessertManiacDarkThemePreview() {
-    DessertManiacTheme(darkTheme = true) {
-        SweetSavorApp()
-    }
-}

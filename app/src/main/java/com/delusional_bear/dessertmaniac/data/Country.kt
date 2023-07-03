@@ -8,5 +8,5 @@ import androidx.annotation.StringRes
 data class Country(
     @StringRes val continentName: Int,
     @StringRes val countryName: Int,
-    @DrawableRes val countryImage: Int = 0,
+    val countryImage: String,
 )

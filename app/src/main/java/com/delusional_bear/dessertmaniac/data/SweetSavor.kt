@@ -7,9 +7,12 @@ import com.delusional_bear.dessertmaniac.R
  * [SweetSavor] enum class represents the titles of different app's screens
  */
 enum class SweetSavor(@StringRes val title: Int) {
-    Start(title = R.string.app_name),
+    Home(title = R.string.app_name),
     Continent(title = R.string.continent),
     Country(title = R.string.country),
     Profile(title = R.string.profile),
     Desserts(title = R.string.desserts),
+    Favorites(title = R.string.favorites),
+    Cart(title = R.string.shopping_cart),
+    PersonalData(title = R.string.personal_data)
 }
