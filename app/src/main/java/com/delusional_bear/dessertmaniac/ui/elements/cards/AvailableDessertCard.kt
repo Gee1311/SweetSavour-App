@@ -1,6 +1,10 @@
 package com.delusional_bear.dessertmaniac.ui.elements.cards
 
 import android.content.Context
+import androidx.compose.animation.animateContentSize
+import androidx.compose.animation.core.animateDp
+import androidx.compose.animation.core.updateTransition
+import androidx.compose.foundation.gestures.detectTapGestures
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
@@ -22,9 +26,14 @@ import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.OutlinedIconButton
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.getValue
+import androidx.compose.runtime.mutableStateOf
+import androidx.compose.runtime.remember
+import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
+import androidx.compose.ui.input.pointer.pointerInput
 import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.res.dimensionResource
@@ -32,7 +41,9 @@ import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextAlign
+import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.tooling.preview.Preview
+import androidx.compose.ui.unit.Dp
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import coil.compose.AsyncImage
@@ -42,6 +53,15 @@ import com.delusional_bear.dessertmaniac.data.model.DataSource
 import com.delusional_bear.dessertmaniac.ui.common_functions.convertDoubleToCurrency
 import com.delusional_bear.dessertmaniac.ui.theme.DessertManiacTheme
 
+enum class DessertIngredients(
+    val width: Dp,
+    val height: Dp,
+    val borderRadius: Dp,
+) {
+    Normal(width = 360.dp, height = 320.dp, 4.dp),
+    Shrink(width = 220.dp, height = 260.dp, 16.dp),
+}
+
 @Composable
 fun AvailableDessertCard(
     dessert: Dessert,
@@ -50,6 +70,11 @@ fun AvailableDessertCard(
     onLikeButtonClick: () -> Unit = {},
     onAddToCartClick: () -> Unit = {},
 ) {
+    var dessertIngredientsState by remember { mutableStateOf(DessertIngredients.Normal) }
+    val transition = updateTransition(targetState = dessertIngredientsState, label = "")
+    val animateWidthSize by transition.animateDp(label = "") { it.width }
+    val animateHeightSize by transition.animateDp(label = "") { it.height }
+    val animateBorderRadius by transition.animateDp(label = "") { it.borderRadius }
     Card(modifier = modifier) {
         Column(
             modifier = Modifier
@@ -64,22 +89,37 @@ fun AvailableDessertCard(
             Spacer(modifier = Modifier.height(8.dp))
             Row(
                 horizontalArrangement = Arrangement.SpaceBetween,
-                modifier = Modifier.fillMaxWidth()
+                modifier = Modifier
+                    .fillMaxWidth()
+                    .animateContentSize()
             ) {
-                LazyColumn(
-                    modifier = Modifier.height(260.dp),
-                    verticalArrangement = Arrangement.spacedBy(dimensionResource(id = R.dimen.padding_small))
-                ) {
-                    items(dessert.ingredients.map { context.resources.getString(it) }) { ingredient ->
-                        DessertIngredientCard(ingredient = ingredient)
+                if (dessertIngredientsState == DessertIngredients.Shrink) {
+                    LazyColumn(
+                        modifier = Modifier.height(260.dp),
+                        verticalArrangement = Arrangement.spacedBy(dimensionResource(id = R.dimen.padding_small))
+                    ) {
+                        items(dessert.ingredients.map { context.resources.getString(it) }) { ingredient ->
+                            DessertIngredientCard(ingredient = ingredient)
+                        }
                     }
                 }
                 AsyncImage(
                     model = dessert.dessertImageURL,
                     contentDescription = stringResource(id = dessert.dessertName),
                     modifier = modifier
-                        .clip(RoundedCornerShape(8.dp))
-                        .size(width = 220.dp, height = 260.dp),
+                        .clip(RoundedCornerShape(animateBorderRadius))
+                        .size(width = animateWidthSize, height = animateHeightSize)
+                        .pointerInput(Unit) {
+                            detectTapGestures(
+                                onLongPress = {
+                                    dessertIngredientsState =
+                                        if (dessertIngredientsState == DessertIngredients.Normal)
+                                            DessertIngredients.Shrink
+                                        else
+                                            DessertIngredients.Normal
+                                }
+                            )
+                        },
                     contentScale = ContentScale.Crop,
                 )
             }
@@ -99,7 +139,9 @@ fun AvailableDessertCard(
                 text = stringResource(id = dessert.description),
                 style = MaterialTheme.typography.bodySmall,
                 textAlign = TextAlign.Justify,
-                lineHeight = 20.sp
+                lineHeight = 20.sp,
+                overflow = TextOverflow.Ellipsis,
+                maxLines = 3
             )
             Spacer(modifier = Modifier.weight(1f))
             Row(
