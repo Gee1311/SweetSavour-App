@@ -108,7 +108,7 @@ fun SweetSavorApp(
                         AvailableDessertsScreen(
                             listOfDesserts = dessertList,
                             viewModel = viewModel,
-                            onBackPressed = { cancelAndNavigateBack(navController = navController) },
+//                            onBackPressed = { cancelAndNavigateBack(navController = navController) },
                         )
                     }
                     composable(route = SweetSavor.Favorites.name) {
