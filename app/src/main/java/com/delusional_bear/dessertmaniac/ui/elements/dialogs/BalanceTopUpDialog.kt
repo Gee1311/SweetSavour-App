@@ -1,6 +1,5 @@
 package com.delusional_bear.dessertmaniac.ui.elements.dialogs
 
-import android.content.Context
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material3.AlertDialog
 import androidx.compose.material3.Button
@@ -10,21 +9,20 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.unit.dp
-import androidx.compose.ui.unit.sp
 import com.delusional_bear.dessertmaniac.R
-import com.delusional_bear.dessertmaniac.data.Dessert
+import com.delusional_bear.dessertmaniac.ui.common_functions.convertDoubleToCurrency
 
 @Composable
-fun DessertAlertDialog(
+fun BalanceTopUpDialog(
+    totalBalance: Double,
+    toppedUpBalance: Double,
     modifier: Modifier = Modifier,
-    context: Context,
-    dessert: Dessert,
     onDialogDismiss: () -> Unit = {},
     onConfirmClick: () -> Unit = {},
     onDismissClick: () -> Unit = {},
 ) {
     AlertDialog(
-        onDismissRequest = onDialogDismiss,
+        onDismissRequest = { onDialogDismiss.invoke() },
         confirmButton = {
             Button(
                 onClick = { onConfirmClick.invoke() },
@@ -47,16 +45,22 @@ fun DessertAlertDialog(
                 )
             }
         },
-        modifier = modifier,
+        title = {
+            Text(
+                text = stringResource(id = R.string.top_up_dialog_title),
+                style = MaterialTheme.typography.displaySmall,
+            )
+        },
         text = {
             Text(
                 text = stringResource(
-                    id = R.string.dessert_added,
-                    context.resources.getString(dessert.dessertName)
+                    id = R.string.top_up_dialog_text,
+                    convertDoubleToCurrency(toppedUpBalance),
+                    convertDoubleToCurrency(totalBalance)
                 ),
                 style = MaterialTheme.typography.titleSmall,
-                lineHeight = 24.sp,
             )
-        }
+        },
+        modifier = modifier,
     )
 }

@@ -1,5 +1,6 @@
 package com.delusional_bear.dessertmaniac.ui.elements.cards
 
+import android.widget.Toast
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Spacer
@@ -15,28 +16,24 @@ import androidx.compose.material3.CardDefaults
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
-import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
-import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.layout.ContentScale
+import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.res.dimensionResource
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextAlign
-import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import coil.compose.AsyncImage
 import com.delusional_bear.dessertmaniac.R
-import com.delusional_bear.dessertmaniac.ui.common_elements.HeartIcon
 import com.delusional_bear.dessertmaniac.data.Dessert
-import com.delusional_bear.dessertmaniac.data.model.DataSource
 import com.delusional_bear.dessertmaniac.ui.common_elements.DessertRating
+import com.delusional_bear.dessertmaniac.ui.common_elements.HeartIcon
 import com.delusional_bear.dessertmaniac.ui.common_functions.convertDoubleToCurrency
 import com.delusional_bear.dessertmaniac.ui.elements.dialogs.DessertAlertDialog
-import com.delusional_bear.dessertmaniac.ui.theme.DessertManiacTheme
 
 @Composable
 fun MostOrderedDessertCard(
@@ -45,7 +42,8 @@ fun MostOrderedDessertCard(
     onLikeButtonClick: () -> Unit = {},
     onAddToCartButtonClick: () -> Unit = {},
 ) {
-    var isLikeButtonClicked by remember { mutableStateOf(false) }
+    val openDialog = remember { mutableStateOf(false) }
+    val context = LocalContext.current
     Card(
         modifier = modifier,
         elevation = CardDefaults.cardElevation(defaultElevation = 8.dp),
@@ -62,7 +60,10 @@ fun MostOrderedDessertCard(
                     modifier = Modifier
                         .padding(4.dp)
                         .size(24.dp)
-                ) { onLikeButtonClick.invoke() }
+                ) {
+                    onLikeButtonClick.invoke()
+                    openDialog.value = true
+                }
             }
             Column(
                 horizontalAlignment = Alignment.CenterHorizontally,
@@ -87,8 +88,7 @@ fun MostOrderedDessertCard(
                 Spacer(modifier = Modifier.height(4.dp))
                 Button(
                     onClick = { onAddToCartButtonClick.invoke() },
-                    modifier = Modifier
-                        .fillMaxWidth(0.65f),
+                    modifier = Modifier.fillMaxWidth(0.65f),
                     shape = RoundedCornerShape(8.dp)
                 ) {
                     Text(
@@ -98,27 +98,15 @@ fun MostOrderedDessertCard(
                 }
             }
         }
-        if (isLikeButtonClicked) DessertAlertDialog(
-            dessert = dessert,
-            onDialogDismiss = { isLikeButtonClicked = false },
-            onConfirmClick = { isLikeButtonClicked = false },
-            onCancelClick = { isLikeButtonClicked = false }
+        if (openDialog.value) DessertAlertDialog(dessert = dessert,
+            onDialogDismiss = { openDialog.value = false },
+            onConfirmClick = {
+                openDialog.value = false
+                Toast.makeText(context, R.string.toast_dessert_added_message, Toast.LENGTH_LONG)
+                    .show()
+            },
+            onDismissClick = { openDialog.value = false },
+            context = LocalContext.current
         )
-    }
-}
-
-@Preview
-@Composable
-private fun DessertCardLightThemePreview() {
-    DessertManiacTheme {
-        MostOrderedDessertCard(dessert = DataSource.dessertList.random())
-    }
-}
-
-@Preview
-@Composable
-private fun DessertCardDarkThemePreview() {
-    DessertManiacTheme(darkTheme = true) {
-        MostOrderedDessertCard(dessert = DataSource.dessertList.random())
     }
 }

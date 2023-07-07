@@ -1,13 +1,10 @@
 package com.delusional_bear.dessertmaniac.ui.sweetsavor
 
-import android.content.Context
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.setValue
-import androidx.compose.ui.focus.FocusManager
 import androidx.lifecycle.ViewModel
 import com.delusional_bear.dessertmaniac.data.Dessert
-import com.delusional_bear.dessertmaniac.data.model.DataSource
 import com.delusional_bear.dessertmaniac.data.model.SweetSavorRepository
 import com.delusional_bear.dessertmaniac.data.model.response.RecipeResponse
 import com.delusional_bear.dessertmaniac.ui.common_functions.totalPriceOfOrderedDesserts
@@ -23,33 +20,18 @@ class SweetSavorViewModel(private val repository: SweetSavorRepository = SweetSa
     private val _uiState = MutableStateFlow(SweetUiState())
     val uiState: StateFlow<SweetUiState> = _uiState.asStateFlow()
 
-    var dessertName by mutableStateOf("")
+    var moneyAmount by mutableStateOf("0")
 
-    var inputUserName by mutableStateOf("")
-    var inputUserDateOfBirth by mutableStateOf("")
-    var inputUserYourJob by mutableStateOf("")
-    var inputUserMonthlyIncome by mutableStateOf("")
-
-    var isRadioButtonSelected by mutableStateOf(true)
-
-    fun setRadioButtonState(state: Boolean) {
-        isRadioButtonSelected = state
+    fun setMoneyToTopUp(money: String) {
+        moneyAmount = money
     }
 
-    fun setUserName(name: String) {
-        inputUserName = name
-    }
-
-    fun setUserDateOfBirth(dateOfBirth: String) {
-        inputUserDateOfBirth = dateOfBirth
-    }
-
-    fun setUserJob(job: String) {
-        inputUserYourJob = job
-    }
-
-    fun setUserIncome(income: String) {
-        inputUserMonthlyIncome = income
+    fun updateUserBalance() {
+        _uiState.update { currentState ->
+            currentState.copy(
+                balance = currentState.balance.plus(moneyAmount.toDouble())
+            )
+        }
     }
 
     fun setContinent(continent: Int) {
@@ -60,33 +42,12 @@ class SweetSavorViewModel(private val repository: SweetSavorRepository = SweetSa
         }
     }
 
-    fun inputDessertName(name: String) {
-        dessertName = name
-    }
-
-    fun changeLogoutDialogCondition() {
+    fun changeSignOutDialogCondition() {
         _uiState.update { currentState ->
             currentState.copy(
-                isLogoutDialogOpened = !currentState.isLogoutDialogOpened
+                isSignOutDialogOpened = !currentState.isSignOutDialogOpened
             )
         }
-    }
-
-    fun checkAvailability(
-        focusManager: FocusManager,
-        context: Context
-    ) {
-        DataSource.dessertList.forEach { dessert ->
-            if (context.resources.getString(dessert.dessertName).equals(dessertName, ignoreCase = true)) {
-                _uiState.update { currentState ->
-                    currentState.copy(
-                        isDessertAvailable = true
-                    )
-                }
-            }
-        }
-        focusManager.clearFocus()
-        inputDessertName("")
     }
 
     fun addToFavorites(dessert: Dessert) {

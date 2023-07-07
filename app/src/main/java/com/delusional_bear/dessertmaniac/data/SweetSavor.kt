@@ -14,5 +14,8 @@ enum class SweetSavor(@StringRes val title: Int) {
     Desserts(title = R.string.desserts),
     Favorites(title = R.string.favorites),
     Cart(title = R.string.shopping_cart),
-    PersonalData(title = R.string.personal_data)
+    PersonalData(title = R.string.personal_data),
+    Balance(title = R.string.balance),
+    Order(title = R.string.order),
+    TopUpBalance(title = R.string.top_up_balance),
 }

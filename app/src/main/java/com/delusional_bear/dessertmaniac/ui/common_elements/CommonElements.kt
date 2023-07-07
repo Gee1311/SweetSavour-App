@@ -50,7 +50,7 @@ fun HeartIcon(
 }
 
 @Composable
-fun OrderDestinationDescriptionText(
+fun DescriptionText(
     @StringRes text: Int,
     modifier: Modifier = Modifier
 ) {

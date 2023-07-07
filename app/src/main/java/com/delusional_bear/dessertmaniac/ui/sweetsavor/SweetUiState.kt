@@ -14,7 +14,9 @@ data class SweetUiState(
     val subTotal: Double = 0.0,
     val shipping: Double = 2.99,
     val discount: Double = 0.0,
-    val balance: Double = 140.0,
+    val balance: Double = 0.0,
+    val orders: Int = 0,
     val totalItems: Int = 0,
-    val isLogoutDialogOpened: Boolean = false,
+    val isSignOutDialogOpened: Boolean = false,
+    val isFavoriteDialogOpened: Boolean = false,
 )

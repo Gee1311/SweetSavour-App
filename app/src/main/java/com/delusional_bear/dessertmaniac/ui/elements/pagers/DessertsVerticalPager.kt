@@ -1,15 +1,6 @@
 package com.delusional_bear.dessertmaniac.ui.elements.pagers
 
-import android.content.Context
-import androidx.compose.foundation.ExperimentalFoundationApi
-import androidx.compose.foundation.pager.VerticalPager
-import androidx.compose.runtime.Composable
-import androidx.compose.ui.Modifier
-import androidx.compose.ui.unit.Dp
-import com.delusional_bear.dessertmaniac.data.Dessert
-import com.delusional_bear.dessertmaniac.ui.sweetsavor.SweetSavorViewModel
-import com.delusional_bear.dessertmaniac.ui.elements.cards.AvailableDessertCard
-
+/*
 @OptIn(ExperimentalFoundationApi::class)
 @Composable
 fun DessertsVerticalPager(
@@ -33,4 +24,4 @@ fun DessertsVerticalPager(
         modifier = modifier,
         pageSpacing = pageSpacing,
     )
-}
+}*/
