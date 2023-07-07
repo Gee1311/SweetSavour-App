@@ -1,5 +1,6 @@
 package com.delusional_bear.dessertmaniac.ui.screens
 
+import androidx.activity.compose.BackHandler
 import androidx.compose.foundation.ExperimentalFoundationApi
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.padding
@@ -20,7 +21,9 @@ import com.delusional_bear.dessertmaniac.ui.theme.DessertManiacTheme
 fun FavoriteScreen(
     uiState: SweetUiState,
     modifier: Modifier = Modifier,
+    onBackPressed: () -> Unit = {},
 ) {
+    BackHandler { onBackPressed.invoke() }
     LazyVerticalStaggeredGrid(
         modifier = modifier.padding(dimensionResource(id = R.dimen.padding_large)),
         columns = StaggeredGridCells.Fixed(2),

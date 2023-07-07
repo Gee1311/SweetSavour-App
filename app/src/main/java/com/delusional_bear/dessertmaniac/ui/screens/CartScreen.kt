@@ -1,5 +1,6 @@
 package com.delusional_bear.dessertmaniac.ui.screens
 
+import androidx.activity.compose.BackHandler
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
@@ -23,24 +24,23 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.res.dimensionResource
 import androidx.compose.ui.res.stringResource
-import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import com.delusional_bear.dessertmaniac.R
 import com.delusional_bear.dessertmaniac.data.Dessert
-import com.delusional_bear.dessertmaniac.data.model.DataSource
 import com.delusional_bear.dessertmaniac.ui.common_functions.convertDoubleToCurrency
 import com.delusional_bear.dessertmaniac.ui.common_functions.totalPriceOfOrderedDesserts
 import com.delusional_bear.dessertmaniac.ui.elements.cards.CartCard
 import com.delusional_bear.dessertmaniac.ui.sweetsavor.SweetSavorViewModel
 import com.delusional_bear.dessertmaniac.ui.sweetsavor.SweetUiState
-import com.delusional_bear.dessertmaniac.ui.theme.DessertManiacTheme
 
 @Composable
 fun CartScreen(
     uiState: SweetUiState,
     viewModel: SweetSavorViewModel,
     modifier: Modifier = Modifier,
+    onBackPressed: () -> Unit = {},
 ) {
+    BackHandler { onBackPressed.invoke()  }
     Column(modifier = modifier
         .fillMaxSize()
         .padding(dimensionResource(id = R.dimen.padding_large))
@@ -153,22 +153,6 @@ private fun TotalPrice(
                 }
             }
         }
-    }
-}
-
-@Preview
-@Composable
-fun CartScreenLightThemePreview() {
-    DessertManiacTheme {
-        CartCard(dessert = DataSource.dessertList.random(), count = 4)
-    }
-}
-
-@Preview
-@Composable
-fun CartScreenDarkThemePreview() {
-    DessertManiacTheme(darkTheme = true) {
-        CartCard(dessert = DataSource.dessertList.random(), count = 4)
     }
 }
 

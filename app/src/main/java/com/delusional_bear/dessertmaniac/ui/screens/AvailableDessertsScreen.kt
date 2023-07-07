@@ -1,5 +1,6 @@
 package com.delusional_bear.dessertmaniac.ui.screens
 
+import androidx.activity.compose.BackHandler
 import androidx.compose.foundation.layout.padding
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
@@ -18,7 +19,9 @@ fun AvailableDessertsScreen(
     listOfDesserts: List<Dessert>,
     modifier: Modifier = Modifier,
     viewModel: SweetSavorViewModel,
+    onBackPressed: () -> Unit = {},
 ) {
+    BackHandler { onBackPressed.invoke() }
     val context = LocalContext.current
     DessertsVerticalPager(
         dessertsList = listOfDesserts,

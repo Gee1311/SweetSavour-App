@@ -14,25 +14,23 @@ import androidx.compose.material3.Surface
 import androidx.compose.material3.Text
 import androidx.compose.material3.TextButton
 import androidx.compose.runtime.Composable
-import androidx.compose.runtime.getValue
-import androidx.compose.runtime.mutableStateOf
-import androidx.compose.runtime.remember
-import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.res.stringResource
-import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import com.delusional_bear.dessertmaniac.R
-import com.delusional_bear.dessertmaniac.ui.theme.DessertManiacTheme
+import com.delusional_bear.dessertmaniac.ui.sweetsavor.SweetUiState
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
-fun LogoutDialog(modifier: Modifier = Modifier) {
-    var openDialog by remember { mutableStateOf(true) }
-    if (openDialog) {
+fun SignOutDialog(
+    modifier: Modifier = Modifier,
+    uiState: SweetUiState,
+    onClick: () -> Unit = {},
+) {
+    if (uiState.isSignOutDialogOpened) {
         AlertDialog(
-            onDismissRequest = { openDialog = !openDialog }
+            onDismissRequest = { onClick.invoke() }
         ) {
             Surface(
                 modifier = modifier.wrapContentSize(),
@@ -41,20 +39,18 @@ fun LogoutDialog(modifier: Modifier = Modifier) {
             ) {
                 Column(modifier = Modifier.padding(16.dp)) {
                     Text(
-                        text = stringResource(id = R.string.log_out_text),
+                        text = stringResource(id = R.string.sign_out_text),
                         style = MaterialTheme.typography.displaySmall,
                     )
                     Spacer(modifier = Modifier.height(24.dp))
                     Row(modifier = Modifier.align(Alignment.End)) {
                         TextButton(
-                            onClick = {
-                                openDialog = false
-                            }
+                            onClick = { onClick.invoke() }
                         ) {
                             ButtonText(text = R.string.cancel)
                         }
                         TextButton(
-                            onClick = { openDialog = false }
+                            onClick = { onClick.invoke() }
                         ) {
                             ButtonText(text = R.string.confirm)
                         }
@@ -75,20 +71,4 @@ fun ButtonText(
         style = MaterialTheme.typography.titleSmall,
         modifier = modifier
     )
-}
-
-@Preview
-@Composable
-private fun LogoutDialogLightThemePreview() {
-    DessertManiacTheme {
-        LogoutDialog()
-    }
-}
-
-@Preview
-@Composable
-private fun LogoutDialogDarkThemePreview() {
-    DessertManiacTheme(darkTheme = true) {
-        LogoutDialog()
-    }
 }

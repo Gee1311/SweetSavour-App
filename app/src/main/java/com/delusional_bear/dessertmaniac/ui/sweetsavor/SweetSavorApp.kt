@@ -14,25 +14,27 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.res.dimensionResource
 import androidx.compose.ui.tooling.preview.Preview
-import androidx.navigation.NavHostController
+import androidx.lifecycle.viewmodel.compose.viewModel
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.compose.currentBackStackEntryAsState
 import androidx.navigation.compose.rememberNavController
-import androidx.lifecycle.viewmodel.compose.viewModel
 import com.delusional_bear.dessertmaniac.R
 import com.delusional_bear.dessertmaniac.data.SweetSavor
 import com.delusional_bear.dessertmaniac.data.model.DataSource.continentsList
 import com.delusional_bear.dessertmaniac.data.model.DataSource.dessertList
+import com.delusional_bear.dessertmaniac.ui.common_functions.cancelAndNavigateBack
 import com.delusional_bear.dessertmaniac.ui.elements.other.SweetBottomAppBar
 import com.delusional_bear.dessertmaniac.ui.elements.other.SweetTopAppBar
 import com.delusional_bear.dessertmaniac.ui.screens.AvailableDessertsScreen
+import com.delusional_bear.dessertmaniac.ui.screens.BalanceScreen
 import com.delusional_bear.dessertmaniac.ui.screens.CartScreen
 import com.delusional_bear.dessertmaniac.ui.screens.ContinentsScreen
 import com.delusional_bear.dessertmaniac.ui.screens.CountriesScreen
 import com.delusional_bear.dessertmaniac.ui.screens.FavoriteScreen
 import com.delusional_bear.dessertmaniac.ui.screens.HomeScreen
 import com.delusional_bear.dessertmaniac.ui.screens.ProfileScreen
+import com.delusional_bear.dessertmaniac.ui.screens.TopUpBalanceScreen
 import com.delusional_bear.dessertmaniac.ui.theme.DessertManiacTheme
 
 @Composable
@@ -46,11 +48,6 @@ fun SweetSavorApp(
     val currentScreenTitle = SweetSavor.valueOf(
         value = backStackEntry?.destination?.route ?: SweetSavor.Home.name
     )
-    val context = LocalContext.current
-
-    // recipes
-//    val recipes = viewModel.getRecipes()
-
     Scaffold(
         topBar = {
             SweetTopAppBar(
@@ -83,7 +80,6 @@ fun SweetSavorApp(
                                 .wrapContentHeight(Alignment.Bottom)
                                 .padding(bottom = dimensionResource(id = R.dimen.padding_large)),
                             sweetSavorViewModel = viewModel,
-                            sweetUiState = uiState,
                         )
                     }
                     composable(route = SweetSavor.Continent.name) {
@@ -99,42 +95,54 @@ fun SweetSavorApp(
                     }
                     composable(route = SweetSavor.Profile.name) {
                         ProfileScreen(
-                            viewModel = viewModel,
                             uiState = uiState,
+                            onDialogClick = { viewModel.changeSignOutDialogCondition() },
+                            onBalanceButtonClick = { navController.navigate(SweetSavor.Balance.name) },
+                            onPromotionButtonClick = {  },
+                            onSettingsButtonClick = {  },
+                            onBackPressed = { cancelAndNavigateBack(navController = navController) },
+                            onOrderButtonClick = { navController.navigate(SweetSavor.Order.name) }
                         )
                     }
                     composable(route = SweetSavor.Desserts.name) {
                         AvailableDessertsScreen(
                             listOfDesserts = dessertList,
                             viewModel = viewModel,
+                            onBackPressed = { cancelAndNavigateBack(navController = navController) },
                         )
                     }
                     composable(route = SweetSavor.Favorites.name) {
-                        FavoriteScreen(uiState = uiState)
+                        FavoriteScreen(
+                            uiState = uiState,
+                            onBackPressed = { cancelAndNavigateBack(navController = navController) },
+                        )
                     }
                     composable(route = SweetSavor.Cart.name) {
                         CartScreen(
                             uiState = uiState,
-                            viewModel = viewModel
+                            viewModel = viewModel,
+                            onBackPressed = { cancelAndNavigateBack(navController = navController) },
                         )
                     }
-                    // FIXME: Fix navigation issue from ProfileScreen to another 
-                    /*composable(
-                        route = SweetSavor.PersonalData.name + "/{optionNumber}",
-                        arguments = listOf(navArgument("optionNumber") {
-                            type = NavType.IntType
-                        })
-                    ) { backStackEntry ->
-                        PersonalDataScreen(viewModel = viewModel)
-                    }*/
+                    composable(route = SweetSavor.Balance.name) {
+                        BalanceScreen(
+                            uiState = uiState,
+                            onTopUpCardClick = { navController.navigate(SweetSavor.TopUpBalance.name) }
+                        )
+                    }
+                    composable(route = SweetSavor.TopUpBalance.name) {
+                        TopUpBalanceScreen(
+                            onMoneyAmountChange = { viewModel.setMoneyToTopUp(it) },
+                            onConfirmButtonClick = { viewModel.updateUserBalance() },
+                            moneyAmount = viewModel.moneyAmount,
+                            onClick = { viewModel.setMoneyToTopUp(it.toString()) },
+                            totalBalance = uiState.balance.toString()
+                        )
+                    }
                 }
             }
         },
     )
-}
-
-private fun cancelAndNavigateBack(navController: NavHostController) {
-    navController.popBackStack(SweetSavor.Home.name, false)
 }
 
 @Preview

@@ -267,8 +267,8 @@
     <string name="next">Next</string>
     <string name="choose_continent">Select one of the four continents where our shops are available</string>
     <string name="continent_chosen">Continent: %s</string>
-    <string name="user_name">Ron DeSantis</string>
-    <string name="user_occupation">America Saver</string>
+    <string name="user_name">Larry Rabbit</string>
+    <string name="user_occupation">The American playboy</string>
     <string name="my_account">My Account</string>
     <string name="switch_account">Switch to Other Account</string>
     <string name="sign_out">Sign Out</string>
@@ -356,4 +356,19 @@
     <string name="proceed_to_checkout">Proceed To Checkout</string>
     <string name="discount">Discount:</string>
     <string name="balance">Balance</string>
+    <string name="phone">099 124 56 79</string>
+    <string name="promotions">Promotions</string>
+    <string name="payment">Payment</string>
+    <string name="your_balance">Your Balance</string>
+    <string name="send_money">Send money</string>
+    <string name="top_up_balance">Top up balance</string>
+    <string name="withdraw_money">Withdraw money</string>
+    <string name="choose_top_up_amount">Choose amount of money that you want to top up</string>
+    <string name="top_up_input_requirement">Input only in $</string>
+    <string name="wrong_input">Wrong input</string>
+    <string name="edit_profile">Edit Profile</string>
+    <string name="content">Content</string>
+    <string name="top_up_dialog_title">Top up</string>
+    <string name="top_up_dialog_text">Your balance has been topped up on %1s. Your current balance is %2s</string>
+    <string name="toast_dessert_added_message">Dessert has been added successfully</string>
 </resources>

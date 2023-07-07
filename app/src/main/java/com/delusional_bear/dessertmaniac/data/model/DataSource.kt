@@ -671,4 +671,6 @@ object DataSource {
             R.string.community,
         ),
     )
+
+    val balanceOptionsAmountList = listOf("1", "5", "10", "25", "50", "100", "150", "175")
 }
