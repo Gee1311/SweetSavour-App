@@ -151,7 +151,10 @@ private fun DessertIngredientCard(
     ingredient: String,
     modifier: Modifier = Modifier,
 ) {
-    Surface(modifier = modifier.size(width = 110.dp, height = 90.dp)) {
+    Surface(
+        modifier = modifier.size(width = 110.dp, height = 90.dp),
+        shape = RoundedCornerShape(16.dp)
+    ) {
         Row(
             modifier = Modifier.fillMaxSize(1f),
             horizontalArrangement = Arrangement.Center,
