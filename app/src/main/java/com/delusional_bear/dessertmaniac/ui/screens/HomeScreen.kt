@@ -45,11 +45,12 @@ fun HomeScreen(
                 coroutineScope.launch {
                     delay(500L)
                     sweetSavorViewModel.addToCart(it)
-                    displayToastMessage(context, R.string.dessert_added_to_cart, Toast.LENGTH_SHORT)
+                    displayToastMessage(context, R.string.toast_dessert_added_to_cart_message, Toast.LENGTH_SHORT)
                 }
             },
         ) {
             sweetSavorViewModel.addToFavorites(it)
+            displayToastMessage(context, R.string.toast_dessert_added_to_favorites_message, Toast.LENGTH_SHORT)
         }
     }
 }
