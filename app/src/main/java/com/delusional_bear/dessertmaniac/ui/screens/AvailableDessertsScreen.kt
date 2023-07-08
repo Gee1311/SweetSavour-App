@@ -1,47 +1,36 @@
 package com.delusional_bear.dessertmaniac.ui.screens
 
+import androidx.compose.foundation.layout.Arrangement
+import androidx.compose.foundation.layout.PaddingValues
+import androidx.compose.foundation.lazy.grid.GridCells
+import androidx.compose.foundation.lazy.grid.LazyVerticalGrid
+import androidx.compose.foundation.lazy.grid.items
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
-import androidx.compose.ui.platform.LocalContext
-import androidx.compose.ui.tooling.preview.Preview
+import androidx.compose.ui.res.dimensionResource
+import androidx.compose.ui.unit.dp
+import com.delusional_bear.dessertmaniac.R
 import com.delusional_bear.dessertmaniac.data.Dessert
-import com.delusional_bear.dessertmaniac.data.model.DataSource
-import com.delusional_bear.dessertmaniac.ui.sweetsavor.SweetSavorViewModel
-import com.delusional_bear.dessertmaniac.ui.theme.DessertManiacTheme
+import com.delusional_bear.dessertmaniac.ui.elements.cards.AvailableDessertCard
 
 @Composable
 fun AvailableDessertsScreen(
-    listOfDesserts: List<Dessert>,
+    dessertList: List<Dessert>,
     modifier: Modifier = Modifier,
-    viewModel: SweetSavorViewModel,
+    onFavoriteClick: (Dessert) -> Unit = {},
+    onCartClick: (Dessert) -> Unit = {},
 ) {
-    val context = LocalContext.current
-    /*DessertsVerticalPager(
-        dessertsList = listOfDesserts,
-        modifier = modifier.padding(dimensionResource(id = R.dimen.padding_medium)),
-        pageSpacing = dimensionResource(id = R.dimen.padding_large),
-        viewModel = viewModel,
-        context = context,
-    )*/
-}
-
-@Preview
-@Composable
-private fun AllScreenLightThemePreview() {
-    DessertManiacTheme {
-        AvailableDessertsScreen(
-            listOfDesserts = DataSource.dessertList,
-            viewModel = SweetSavorViewModel(),
-        )
-    }
-}
-@Preview
-@Composable
-private fun AllScreenDarkThemePreview() {
-    DessertManiacTheme(darkTheme = true) {
-        AvailableDessertsScreen(
-            listOfDesserts = DataSource.dessertList,
-            viewModel = SweetSavorViewModel(),
-        )
+    LazyVerticalGrid(
+        columns = GridCells.Adaptive(220.dp),
+        modifier = modifier,
+        contentPadding = PaddingValues(16.dp),
+        verticalArrangement = Arrangement.spacedBy(dimensionResource(id = R.dimen.padding_medium))
+    ) {
+        items(dessertList) { dessert ->
+            AvailableDessertCard(
+                dessert = dessert,
+                onFavoriteClick = { onFavoriteClick(dessert) },
+            ) { onCartClick(dessert) }
+        }
     }
 }
