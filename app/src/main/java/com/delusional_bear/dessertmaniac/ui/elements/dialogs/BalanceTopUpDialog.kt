@@ -19,7 +19,6 @@ fun BalanceTopUpDialog(
     modifier: Modifier = Modifier,
     onDialogDismiss: () -> Unit = {},
     onConfirmClick: () -> Unit = {},
-    onDismissClick: () -> Unit = {},
 ) {
     AlertDialog(
         onDismissRequest = { onDialogDismiss.invoke() },
@@ -30,17 +29,6 @@ fun BalanceTopUpDialog(
             ) {
                 Text(
                     text = stringResource(id = R.string.confirm),
-                    style = MaterialTheme.typography.labelMedium,
-                )
-            }
-        },
-        dismissButton = {
-            Button(
-                onClick = { onDismissClick.invoke() },
-                shape = RoundedCornerShape(8.dp)
-            ) {
-                Text(
-                    text = stringResource(id = R.string.cancel),
                     style = MaterialTheme.typography.labelMedium,
                 )
             }
