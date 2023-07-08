@@ -13,6 +13,7 @@ import androidx.compose.foundation.lazy.grid.LazyVerticalGrid
 import androidx.compose.foundation.lazy.grid.items
 import androidx.compose.foundation.selection.selectable
 import androidx.compose.foundation.shape.RoundedCornerShape
+import androidx.compose.foundation.text.KeyboardOptions
 import androidx.compose.material3.Button
 import androidx.compose.material3.Card
 import androidx.compose.material3.Icon
@@ -23,6 +24,7 @@ import androidx.compose.runtime.Composable
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
+import androidx.compose.runtime.rememberCoroutineScope
 import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
@@ -30,12 +32,15 @@ import androidx.compose.ui.draw.clip
 import androidx.compose.ui.res.dimensionResource
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.res.stringResource
+import androidx.compose.ui.text.input.KeyboardType
 import androidx.compose.ui.unit.dp
 import com.delusional_bear.dessertmaniac.R
 import com.delusional_bear.dessertmaniac.data.model.DataSource
 import com.delusional_bear.dessertmaniac.ui.common_elements.DescriptionText
 import com.delusional_bear.dessertmaniac.ui.common_functions.convertDoubleToCurrency
 import com.delusional_bear.dessertmaniac.ui.elements.dialogs.BalanceTopUpDialog
+import kotlinx.coroutines.delay
+import kotlinx.coroutines.launch
 
 @Composable
 fun TopUpBalanceScreen(
@@ -48,6 +53,7 @@ fun TopUpBalanceScreen(
 ) {
     var selectedAmount by remember { mutableStateOf("") }
     val openDialog = remember { mutableStateOf(false) }
+    val coroutineScope = rememberCoroutineScope()
     Column(
         modifier = modifier
             .fillMaxSize()
@@ -69,7 +75,8 @@ fun TopUpBalanceScreen(
                         painter = painterResource(id = R.drawable.dollar_icon),
                         contentDescription = null,
                     )
-                }
+                },
+                keyboardOptions = KeyboardOptions(keyboardType = KeyboardType.Number)
             )
             Spacer(modifier = Modifier.height(16.dp))
             LazyVerticalGrid(
@@ -99,7 +106,10 @@ fun TopUpBalanceScreen(
             Button(
                 onClick = {
                     onConfirmButtonClick.invoke()
-                    openDialog.value = true
+                    coroutineScope.launch {
+                        delay(5000L)
+                        openDialog.value = true
+                    }
                 },
                 modifier = Modifier,
                 shape = RoundedCornerShape(8.dp),
@@ -112,14 +122,14 @@ fun TopUpBalanceScreen(
             }
         }
     }
-    if (openDialog.value)
+    if (openDialog.value) {
         BalanceTopUpDialog(
             totalBalance = totalBalance.toDouble(),
             toppedUpBalance = moneyAmount.toDouble(),
             onDialogDismiss = { openDialog.value = false },
-            onDismissClick = { openDialog.value = false },
             onConfirmClick = { openDialog.value = false },
         )
+    }
 }
 
 @Composable
