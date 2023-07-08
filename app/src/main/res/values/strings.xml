@@ -370,6 +370,16 @@
     <string name="content">Content</string>
     <string name="top_up_dialog_title">Top up</string>
     <string name="top_up_dialog_text">Your balance has been topped up on %1s. Your current balance is %2s</string>
-    <string name="toast_dessert_added_message">Dessert has been added successfully</string>
-    <string name="dessert_added_to_cart">Dessert has been added to the cart</string>
+    <string name="toast_dessert_added_to_favorites_message">Dessert has been added to "Favorites"</string>
+    <string name="toast_dessert_added_to_cart_message">Dessert has been added to "Cart"</string>
+    <string name="espresso_mud_cakes">Espresso mud cakes, chocolate syrup &amp; ice cream</string>
+    <string name="espresso_powder">Espresso powder</string>
+    <string name="bournville_bar">Bournville bar</string>
+    <string name="coffee_ice_cream">Coffee ice cream</string>
+    <string name="espresso_mud_cakes_description">To finish your meal try this take on coffee and dessert, and if you have any coffee liqueur in the back of the drinks cabinet, put a splash in the syrup</string>
+    <string name="chocolate_cardamom_hazelnut_torte">Chocolate cardamom &amp; hazelnut torte</string>
+    <string name="cardamom_pod">Cardamom pod</string>
+    <string name="chocolate_cardamom_hazelnut_torte_description">This rich, gluten-free torte has an irresistible chocolate &amp; spice mix. An easy weekend treat or dinner party dessert you can make in advance</string>
+    <string name="payment_method">Select payment method</string>
+    <string name="visa">Visa</string>
 </resources>
