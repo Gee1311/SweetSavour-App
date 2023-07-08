@@ -354,6 +354,45 @@ object DataSource {
             799,
             R.string.new_york_cheesecake_description,
         ),
+        Dessert(
+            19,
+            R.string.espresso_mud_cakes,
+            "https://images.immediate.co.uk/production/volatile/sites/30/2020/08/espresso-mud-cakes-chocolate-syrup-ice-cream-b950d16.jpg?quality=90&webp=true&resize=375,341",
+            listOf(
+                R.string.butter,
+                R.string.espresso_powder,
+                R.string.chocolate,
+                R.string.bournville_bar,
+                R.string.caster_sugar,
+                R.string.vanilla_pod,
+                R.string.flour,
+                R.string.coffee_ice_cream,
+                R.string.eggs,
+            ),
+            4.0,
+            5.79,
+            140,
+            R.string.espresso_mud_cakes_description,
+        ),
+        Dessert(
+            20,
+            R.string.chocolate_cardamom_hazelnut_torte,
+            "https://images.immediate.co.uk/production/volatile/sites/30/2020/08/chocolate-torte-d56ded1.jpg?quality=90&webp=true&resize=375,341",
+            listOf(
+                R.string.hazelnut,
+                R.string.cardamom_pod,
+                R.string.dark_chocolate,
+                R.string.butter,
+                R.string.caster_sugar,
+                R.string.cocoa_powder,
+                R.string.eggs,
+                R.string.cream_fraiche,
+            ),
+            5.0,
+            6.49,
+            1400,
+            R.string.chocolate_cardamom_hazelnut_torte_description,
+        ),
     ).toList().sortedByDescending { it.rating }
 
     /** [continentsList] is a list that holds [Continent] objects
@@ -672,5 +711,5 @@ object DataSource {
         ),
     )
 
-    val balanceOptionsAmountList = listOf("1", "5", "10", "25", "50", "100", "150", "175")
+    val balanceOptionsAmountList = listOf(1, 5, 10, 25, 50, 110, 150, 210)
 }
