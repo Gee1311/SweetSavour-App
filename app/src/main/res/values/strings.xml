@@ -371,4 +371,5 @@
     <string name="top_up_dialog_title">Top up</string>
     <string name="top_up_dialog_text">Your balance has been topped up on %1s. Your current balance is %2s</string>
     <string name="toast_dessert_added_message">Dessert has been added successfully</string>
+    <string name="dessert_added_to_cart">Dessert has been added to the cart</string>
 </resources>
