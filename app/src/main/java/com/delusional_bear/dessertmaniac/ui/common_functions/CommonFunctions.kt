@@ -1,5 +1,7 @@
 package com.delusional_bear.dessertmaniac.ui.common_functions
 
+import android.content.Context
+import android.widget.Toast
 import androidx.navigation.NavHostController
 import com.delusional_bear.dessertmaniac.data.Dessert
 import com.delusional_bear.dessertmaniac.data.SweetSavor
@@ -10,7 +12,8 @@ import java.text.NumberFormat
  * Example: 8.99 ---> $8.99
  */
 
-fun convertDoubleToCurrency(price: Number): String = NumberFormat.getCurrencyInstance().format(price)
+fun convertDoubleToCurrency(price: Number): String =
+    NumberFormat.getCurrencyInstance().format(price)
 
 /**
  * [totalPriceOfOrderedDesserts] function is used to calculate the total price of a user's order
@@ -26,4 +29,8 @@ fun totalPriceOfOrderedDesserts(dessertList: List<Dessert>): Double = dessertLis
 
 fun cancelAndNavigateBack(navController: NavHostController) {
     navController.popBackStack(SweetSavor.Home.name, false)
+}
+
+fun displayToastMessage(context: Context, message: Int, toastLength: Int) {
+    Toast.makeText(context, context.resources.getText(message), toastLength).show()
 }
