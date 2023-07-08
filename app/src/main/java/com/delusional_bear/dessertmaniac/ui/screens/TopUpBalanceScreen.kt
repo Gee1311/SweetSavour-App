@@ -90,12 +90,12 @@ fun TopUpBalanceScreen(
             ) {
                 items(DataSource.balanceOptionsAmountList) { balanceOption ->
                     BalanceOptionAmount(
-                        amount = balanceOption,
+                        amount = balanceOption.toString(),
                         onClick = { onClick(balanceOption.toInt()) },
                         modifier = Modifier.selectable(
-                            selected = selectedAmount == balanceOption,
+                            selected = selectedAmount == balanceOption.toString(),
                             onClick = {
-                                selectedAmount = balanceOption
+                                selectedAmount = balanceOption.toString()
                                 onClick(selectedAmount.toInt())
                             }
                         )
