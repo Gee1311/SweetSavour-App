@@ -21,7 +21,6 @@ fun DessertAlertDialog(
     dessert: Dessert,
     onDialogDismiss: () -> Unit = {},
     onConfirmClick: () -> Unit = {},
-    onDismissClick: () -> Unit = {},
 ) {
     AlertDialog(
         onDismissRequest = onDialogDismiss,
@@ -32,17 +31,6 @@ fun DessertAlertDialog(
             ) {
                 Text(
                     text = stringResource(id = R.string.confirm),
-                    style = MaterialTheme.typography.labelMedium,
-                )
-            }
-        },
-        dismissButton = {
-            Button(
-                onClick = { onDismissClick.invoke() },
-                shape = RoundedCornerShape(8.dp)
-            ) {
-                Text(
-                    text = stringResource(id = R.string.cancel),
                     style = MaterialTheme.typography.labelMedium,
                 )
             }
