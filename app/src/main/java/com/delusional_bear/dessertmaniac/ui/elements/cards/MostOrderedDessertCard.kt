@@ -1,6 +1,5 @@
 package com.delusional_bear.dessertmaniac.ui.elements.cards
 
-import android.widget.Toast
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Spacer
@@ -16,12 +15,9 @@ import androidx.compose.material3.CardDefaults
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
-import androidx.compose.runtime.mutableStateOf
-import androidx.compose.runtime.remember
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.layout.ContentScale
-import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.res.dimensionResource
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.font.FontWeight
@@ -33,7 +29,6 @@ import com.delusional_bear.dessertmaniac.data.Dessert
 import com.delusional_bear.dessertmaniac.ui.common_elements.DessertRating
 import com.delusional_bear.dessertmaniac.ui.common_elements.HeartIcon
 import com.delusional_bear.dessertmaniac.ui.common_functions.convertDoubleToCurrency
-import com.delusional_bear.dessertmaniac.ui.elements.dialogs.DessertAlertDialog
 
 @Composable
 fun MostOrderedDessertCard(
@@ -42,8 +37,6 @@ fun MostOrderedDessertCard(
     onLikeButtonClick: () -> Unit = {},
     onAddToCartButtonClick: () -> Unit = {},
 ) {
-    val openDialog = remember { mutableStateOf(false) }
-    val context = LocalContext.current
     Card(
         modifier = modifier,
         elevation = CardDefaults.cardElevation(defaultElevation = 8.dp),
@@ -62,7 +55,6 @@ fun MostOrderedDessertCard(
                         .size(24.dp)
                 ) {
                     onLikeButtonClick.invoke()
-                    openDialog.value = true
                 }
             }
             Column(
@@ -98,15 +90,5 @@ fun MostOrderedDessertCard(
                 }
             }
         }
-        if (openDialog.value) DessertAlertDialog(dessert = dessert,
-            onDialogDismiss = { openDialog.value = false },
-            onConfirmClick = {
-                openDialog.value = false
-                Toast.makeText(context, R.string.toast_dessert_added_message, Toast.LENGTH_LONG)
-                    .show()
-            },
-            onDismissClick = { openDialog.value = false },
-            context = LocalContext.current
-        )
     }
 }
