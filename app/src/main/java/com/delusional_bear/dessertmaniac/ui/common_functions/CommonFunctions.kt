@@ -12,8 +12,8 @@ import java.text.NumberFormat
  * Example: 8.99 ---> $8.99
  */
 
-fun convertDoubleToCurrency(price: Number): String =
-    NumberFormat.getCurrencyInstance().format(price)
+fun convertDoubleToCurrency(price: Number): String = NumberFormat.getCurrencyInstance().format(price).replace("$", "$ ")
+
 
 /**
  * [totalPriceOfOrderedDesserts] function is used to calculate the total price of a user's order
