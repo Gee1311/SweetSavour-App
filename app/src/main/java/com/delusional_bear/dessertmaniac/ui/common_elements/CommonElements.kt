@@ -25,6 +25,7 @@ import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import com.delusional_bear.dessertmaniac.R
 import com.delusional_bear.dessertmaniac.data.Dessert
+import com.delusional_bear.dessertmaniac.ui.theme.montserratAlternates
 import com.gowtham.ratingbar.RatingBar
 import com.gowtham.ratingbar.RatingBarStyle
 
@@ -52,15 +53,17 @@ fun HeartIcon(
 @Composable
 fun DescriptionText(
     @StringRes text: Int,
-    modifier: Modifier = Modifier
+    modifier: Modifier = Modifier,
+    textAlign: TextAlign = TextAlign.Center,
 ) {
     Text(
         text = stringResource(id = text),
-        style = MaterialTheme.typography.headlineMedium,
-        textAlign = TextAlign.Center,
+        textAlign = textAlign,
         lineHeight = 30.sp,
         modifier = modifier,
         fontWeight = FontWeight.Normal,
+        fontSize = 21.sp,
+        fontFamily = montserratAlternates,
     )
 }
 
