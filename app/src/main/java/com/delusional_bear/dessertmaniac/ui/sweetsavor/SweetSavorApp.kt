@@ -9,6 +9,8 @@ import androidx.compose.material3.Scaffold
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.collectAsState
 import androidx.compose.runtime.getValue
+import androidx.compose.runtime.mutableStateOf
+import androidx.compose.runtime.remember
 import androidx.compose.runtime.rememberCoroutineScope
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
@@ -21,10 +23,12 @@ import androidx.navigation.compose.currentBackStackEntryAsState
 import androidx.navigation.compose.rememberNavController
 import com.delusional_bear.dessertmaniac.R
 import com.delusional_bear.dessertmaniac.data.SweetSavor
+import com.delusional_bear.dessertmaniac.data.model.DataSource
 import com.delusional_bear.dessertmaniac.data.model.DataSource.continentsList
 import com.delusional_bear.dessertmaniac.data.model.DataSource.dessertList
 import com.delusional_bear.dessertmaniac.ui.common_functions.cancelAndNavigateBack
 import com.delusional_bear.dessertmaniac.ui.common_functions.displayToastMessage
+import com.delusional_bear.dessertmaniac.ui.elements.dialogs.ConfirmedOrderDetailsDialog
 import com.delusional_bear.dessertmaniac.ui.elements.other.SweetBottomAppBar
 import com.delusional_bear.dessertmaniac.ui.elements.other.SweetTopAppBar
 import com.delusional_bear.dessertmaniac.ui.screens.AvailableDessertsScreen
@@ -47,6 +51,7 @@ fun SweetSavorApp(
     val context = LocalContext.current
     val navController = rememberNavController()
     val backStackEntry by navController.currentBackStackEntryAsState()
+    val openDialog = remember { mutableStateOf(false) }
     val coroutineScope = rememberCoroutineScope()
     val uiState by viewModel.uiState.collectAsState()
     val currentScreenTitle = SweetSavor.valueOf(
@@ -140,8 +145,22 @@ fun SweetSavorApp(
                     composable(route = SweetSavor.Cart.name) {
                         CartScreen(
                             uiState = uiState,
-                            viewModel = viewModel,
                             onBackPressed = { cancelAndNavigateBack(navController = navController) },
+                            dessertsNumberToOrder = uiState.cartDesserts.size,
+                            discount = uiState.discount,
+                            shipping = uiState.shipping,
+                            subTotal = uiState.subTotal,
+                            onMinusButtonClick = { viewModel.minusDessert() },
+                            onPlusButtonClick = { viewModel.plusDessert() },
+                            dessertCount = uiState.dessertCount,
+                            paymentMethods = DataSource.paymentMethods,
+                            deliveryDestination = viewModel.destination,
+                            onDeliveryDestinationChange = { viewModel.destination = it },
+                            onPaymentMethodClick = { viewModel.setPaymentMethod(it) },
+                            onConfirmButtonClick = {
+                                cancelAndNavigateBack(navController = navController)
+                                openDialog.value = true
+                            }
                         )
                     }
                     composable(route = SweetSavor.Balance.name) {
@@ -160,6 +179,18 @@ fun SweetSavorApp(
                         )
                     }
                 }
+            }
+            if (openDialog.value) {
+                ConfirmedOrderDetailsDialog(
+                    paymentMethod = context.resources.getString(uiState.paymentMethod),
+                    destination = viewModel.destination,
+                    onConfirmButtonClick = {
+                        openDialog.value = false
+                    },
+                    onDismissButtonClick = {
+                        openDialog.value = false
+                    },
+                )
             }
         },
     )
