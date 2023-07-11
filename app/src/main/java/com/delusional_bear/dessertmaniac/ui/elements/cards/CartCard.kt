@@ -43,7 +43,7 @@ fun CartCard(
     count: Int,
     modifier: Modifier = Modifier,
     onMinusButtonClick: () -> Unit = {},
-    onAddButtonClick: () -> Unit = {},
+    onPlusButtonClick: () -> Unit = {},
 ) {
     Card(
         shape = RoundedCornerShape(10.dp),
@@ -83,7 +83,7 @@ fun CartCard(
                         modifier = Modifier.padding(horizontal = 4.dp)
                     ) {
                         OutlinedButton(
-                            onClick = { onAddButtonClick.invoke() },
+                            onClick = { onPlusButtonClick.invoke() },
                             modifier = Modifier.defaultMinSize(1.dp, 1.dp),
                             contentPadding = PaddingValues(2.dp),
                             shape = RoundedCornerShape(3.dp)
