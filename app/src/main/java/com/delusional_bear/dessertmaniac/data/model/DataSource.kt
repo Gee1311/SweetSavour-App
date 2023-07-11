@@ -559,113 +559,6 @@ object DataSource {
     ).sortedBy { it.continentName }
 
     /**
-     * [locationList] is a list that holds [Location] objects which represents the exact location
-     * in the exact country where you can go and buy/order any kind of [Dessert]
-     */
-
-    /*val locationList = mutableListOf(
-        Location(
-            R.string.new_york,
-            R.string.new_york_address,
-            4.5,
-            false,
-            1103,
-            "7:00 AM",
-            "5:00 PM",
-            Country(R.string.united_states),
-            LatLng(40.763171768987995, -73.95919479615374),
-        ),
-        Location(
-            R.string.orlando,
-            R.string.orlando_address,
-            3.9,
-            false,
-            114,
-            "7:30 AM",
-            "5:30 PM",
-            Country(R.string.united_states),
-            LatLng(28.52207655666546, -81.39265616603868),
-        ),
-        Location(
-            R.string.kyiv_obolon,
-            R.string.kyiv_address_1,
-            4.1,
-            false,
-            542,
-            "6:30 AM",
-            "6:00 PM",
-            Country(R.string.ukraine),
-            LatLng(50.522564651888516, 30.499148659720614),
-        ),
-        Location(
-            R.string.kyiv_obolon,
-            R.string.kyiv_address_2,
-            4.7,
-            false,
-            1039,
-            "6:30 AM",
-            "6:00 PM",
-            Country(R.string.ukraine),
-            LatLng(50.49489348389758, 30.507526049210878),
-        ),
-        Location(
-            R.string.austin,
-            R.string.austin_address,
-            4.2,
-            false,
-            930,
-            "6:00 AM",
-            "6:00 PM",
-            Country(R.string.united_states),
-            LatLng(30.442748844200956, -97.79614727976275),
-        ),
-        Location(
-            R.string.los_angeles,
-            R.string.los_angeles_address,
-            3.8,
-            false,
-            764,
-            "6:00 AM",
-            "6:30 PM",
-            Country(R.string.united_states),
-            LatLng(33.872950820109246, -118.37950223512051),
-        ),
-        Location(
-            R.string.portland,
-            R.string.portland_address,
-            4.5,
-            false,
-            240,
-            "5:30 AM",
-            "5:00 PM",
-            Country(R.string.united_states),
-            LatLng(45.55041679568743, -122.62467159640424),
-        ),
-        Location(
-            R.string.lviv_kleparow,
-            R.string.lviv_address_2,
-            5.0,
-            false,
-            492,
-            "7:00 AM",
-            "7:00 PM",
-            Country(R.string.ukraine),
-            LatLng(49.84488545550968, 24.020240977523013),
-        ),
-        Location(
-            R.string.lviv_frankivskyi,
-            R.string.lviv_address_1,
-            4.2,
-            false,
-            1039,
-            "6:30 AM",
-            "7:00 PM",
-            Country(R.string.ukraine),
-            LatLng(49.810303442391785, 24.002925367608107),
-        ),
-    ).toList().sortedBy { it.country.countryName }
-*/
-    /**
      * [locationButtonContentList] is a list that holds [Pair] objects which contain titles of the
      * buttons and their icons respectively
      * @see Pair
@@ -678,38 +571,10 @@ object DataSource {
         Pair(R.drawable.call, R.string.call),
     ).toList()
 
-    /**
-     * [userSettingsOptions] is a list that holds [Triple] objects that contain
-     * id, icon and title for user's option in settings
-     */
-
-    val userSettingsOptions = listOf(
-        Triple(
-            1,
-            R.drawable.person_icon,
-            R.string.personal_data,
-        ),
-        Triple(
-            2,
-            R.drawable.settings_icon,
-            R.string.settings,
-        ),
-        Triple(
-            3,
-            R.drawable.heart_icon,
-            R.string.refferal_code,
-        ),
-        Triple(
-            4,
-            R.drawable.faq_icon,
-            R.string.faq,
-        ),
-        Triple(
-            5,
-            R.drawable.groups_icon,
-            R.string.community,
-        ),
-    )
-
     val balanceOptionsAmountList = listOf(1, 5, 10, 25, 50, 110, 150, 210)
+
+    val paymentMethods = listOf(
+        Pair(R.string.card, R.drawable.credit_card_icon),
+        Pair(R.string.cash, R.drawable.payments_icon)
+    )
 }
