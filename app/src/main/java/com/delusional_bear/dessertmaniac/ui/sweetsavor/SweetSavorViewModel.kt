@@ -13,7 +13,8 @@ import kotlinx.coroutines.flow.StateFlow
 import kotlinx.coroutines.flow.asStateFlow
 import kotlinx.coroutines.flow.update
 
-class SweetSavorViewModel(private val repository: SweetSavorRepository = SweetSavorRepository()): ViewModel() {
+class SweetSavorViewModel(private val repository: SweetSavorRepository = SweetSavorRepository()) :
+    ViewModel() {
     fun getRecipes(): List<RecipeResponse> = repository.getRecipes()?.recipes.orEmpty()
     private val favoriteList: MutableSet<Dessert> = mutableSetOf()
     private val cartList: MutableSet<Dessert> = mutableSetOf()
@@ -21,6 +22,7 @@ class SweetSavorViewModel(private val repository: SweetSavorRepository = SweetSa
     val uiState: StateFlow<SweetUiState> = _uiState.asStateFlow()
 
     var moneyAmount by mutableStateOf("0")
+    var destination by mutableStateOf("")
 
     fun setMoneyToTopUp(money: String) {
         moneyAmount = money
@@ -30,6 +32,14 @@ class SweetSavorViewModel(private val repository: SweetSavorRepository = SweetSa
         _uiState.update { currentState ->
             currentState.copy(
                 balance = currentState.balance.plus(moneyAmount.toDouble())
+            )
+        }
+    }
+
+    fun setPaymentMethod(method: Int) {
+        _uiState.update { currentState ->
+            currentState.copy(
+                paymentMethod = method
             )
         }
     }
@@ -71,12 +81,14 @@ class SweetSavorViewModel(private val repository: SweetSavorRepository = SweetSa
                 totalItems = cartList.size,
                 subTotal = totalPriceOfOrderedDesserts(cartList.toList()),
                 discount =
-                    if (cartList.size >= 5 && cartList.size % 5 == 0) currentState.subTotal * 0.01
-                    else currentState.discount,
+                if (cartList.size >= 5 && cartList.size % 5 == 0) currentState.subTotal * 0.01
+                else currentState.discount,
                 shipping =
-                    if (cartList.size == 0) 0.0
-                    else if (currentState.totalItems > 0 && cartList.size % 5 == 0) currentState.shipping.plus(currentState.shipping)
-                    else currentState.shipping,
+                if (cartList.size == 0) 0.0
+                else if (currentState.totalItems > 0 && cartList.size % 5 == 0) currentState.shipping.plus(
+                    currentState.shipping
+                )
+                else currentState.shipping,
             )
         }
     }
@@ -96,4 +108,16 @@ class SweetSavorViewModel(private val repository: SweetSavorRepository = SweetSa
             )
         }
     }
+
+//    private fun pickupOptions(): List<String> {
+//        val dateOptions = mutableListOf<String>()
+//        val formatter = SimpleDateFormat("E MMMM dd", Locale.getDefault())
+//        val calendar = Calendar.getInstance()
+//        // add current date and the following 3 dates.
+//        repeat(3) {
+//            dateOptions.add(formatter.format(calendar.time))
+//            calendar.add(Calendar.DATE, 1)
+//        }
+//        return dateOptions
+//    }
 }
